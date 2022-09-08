@@ -8719,7 +8719,7 @@ body {
   color: #1F1F1F;
   text-align: left;
   background-color: #fff;
-  background-image:url("../../images/cocktail_bg.png");
+  background-image:url("../../images/cocktail_bg1.png");
   background-repeat: repeat;
 }
 
@@ -28560,7 +28560,7 @@ body2 {
 
 .content-wrapper {
   background: #f5f7ff6b;
-  background-image:url("../../images/cocktail_bg.png");
+  background-image:url("../../images/cocktail_bg1.png");
   background-blend-mode:soft-light;
   padding: 2.375rem 2.375rem;
   width: 100%;
@@ -28569,7 +28569,7 @@ body2 {
 }
 .content-wrapper_1 {
   background: #f5f7ff6b;
-  background-image:url("../../images/cocktail_bg.png");
+  background-image:url("../../images/cocktail_bg1.png");
   background-blend-mode:normal;
   padding: 2.375rem 2.375rem;
   width: 100%;
