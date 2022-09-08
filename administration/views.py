@@ -12,7 +12,7 @@ from django.contrib.auth.models import User
 from account.decorator import unauthenticated_user, admin_only
 
 # Create your views here.
-@admin_only
+# @admin_only
 def admin_view(request):
     information = Teacher.objects.all()
     student = Student.objects.all()
