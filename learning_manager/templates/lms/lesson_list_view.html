@@ -1,0 +1,39 @@
+{% extends 'teacher_base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="table-responsive pt-8">
+  <table class="table table-dark">
+    <tr>
+              <th>Lesson</th>
+              <th>SpelaModules</th>
+              <th>Date of creation</th>
+              <th>shortname</th>
+              <th></th>
+
+
+    </tr>
+
+    {% for i in subjects %}
+
+    <tr>
+
+        <td>{{i.title}}</td>
+        <td>{{i.subject.spela_branch}}</td>
+        <td>{{i.date_created}}</td>
+        <td>{{i.slug}}</td>
+        <td>{{i.creator.tutor_id}}</td>
+
+
+
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+{% endblock content %}

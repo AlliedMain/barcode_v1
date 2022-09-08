@@ -1,0 +1,63 @@
+{% extends 'lms_academic_base.html' %}
+{% load static %}
+{% block content %}
+
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="main-panel">
+          <div class="content-wrapper">
+            <div class="row">
+              <div class="col-md-18 ">
+                <div class="row">
+                  <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                    <h3 class="font-weight-bold">Welcome {{user}}</h3>
+                    {% for i in premium %}
+                    <h6 class="font-weight-normal mb-0">Lets make the payment of the fees<span class="text-primary">for {{i.membership}}</span></h6>
+                  </div>
+                  <div>  <div style="margin-top:50px;">
+                  </div>
+                  <div class="card">
+                    {% endfor %}
+    <div class="card-top border-bottom text-center"> <a href="#"> Back to shop</a> <span id="logo"></span> </div>
+    <div class="card-body">
+        <div class="row upper"> <span><i class="fa fa-check-circle-o"></i> Cart </span> <span><i class="fa fa-check-circle-o"></i> Order details</span></div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="left border">
+                <div class="icons"> <img src="https://img.icons8.com/color/48/000000/visa.png" /> <img src="https://img.icons8.com/color/48/000000/mastercard-logo.png" /> <img src="https://img.icons8.com/color/48/000000/maestro.png" /> </div>
+                    </div>
+                    <form> <span>Cardholder's name:</span> <input placeholder="Linda Williams"> <span>Card Number:</span> <input placeholder="0125 6780 4567 9909">
+                        <div class="row">
+                            <div class="col-4"><span>Expiry date:</span> <input placeholder="YY/MM"> </div>
+                            <div class="col-4"><span>CVV:</span> <input id="cvv"> </div>
+                        </div> <input type="checkbox" id="save_card" class="align-left"> <label for="save_card">Save card details to wallet</label>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <div class="right border">
+                    <div class="header">Order Summary</div>
+                    <p>2 items</p>
+                    <div class="row item">
+                        <div class="col-4 align-self-center"><img class="img-fluid" src="images/faces/face1.jpg"></div>
+                        <div class="col-8">
+                            <div class="row"><b>Rs 123506</b></div>
+                            <div class="row text-muted">Spela Seeds</div>
+                            <div class="row">Subscription:1</div>
+                        </div>
+                    </div>
+                    <div class="row item">
+                          <div class="col-4 align-self-center"><img class="img-fluid" src="images/faces/face2.jpg"></div>
+                        <div class="col-8">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div>  <div style="margin-top:50px;">
+                </div>
+              </div>
+
+
+{% endblock %}

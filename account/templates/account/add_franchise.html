@@ -1,0 +1,128 @@
+{% extends 'SpelaSmsbase.html' %}
+{% load static %}
+{% block content %}
+<div class="col-md-8 grid-margin stretch-card">
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title">Add Franchise</h4>
+      <p class="card-description">
+        All fields are mandatory
+      </p>
+      <form class="forms-sample" method='POST' action="" >
+        {% csrf_token %}
+        <div class="form-group row">
+          <label for="title" class="col-sm-3 col-form-label">Title</label>
+          <div class="col-sm-9">
+            {{form.title}}"
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="User" class="col-sm-3 col-form-label">USER</label>
+          <div class="col-sm-9">
+            {{form.user}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="First Name " class="col-sm-3 col-form-label">First_Name</label>
+          <div class="col-sm-9">
+          {{form.first_name}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="last_name" class="col-sm-3 col-form-label">Last Name</label>
+          <div class="col-sm-9">
+            {{form.last_name}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Gender</label>
+          <div class="col-sm-9">
+            {{form.gender}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">FranchiseModel</label>
+          <div class="col-sm-9">
+            {{form.franschise_model}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Martial Status</label>
+          <div class="col-sm-9">
+          {{form.martial_status}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Educational Qualification</label>
+          <div class="col-sm-9">
+          {{form.educational_qualification}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Professional Details</label>
+          <div class="col-sm-9">
+          {{form.professional_details}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Auto TimeStamp</label>
+          <div class="col-sm-9">
+          {{form.created_timestamp}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Mobile_no</label>
+          <div class="col-sm-9">
+          {{form.mobile_no}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Email</label>
+          <div class="col-sm-9">
+          {{form.email}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Day_Phone</label>
+          <div class="col-sm-9">
+          {{form.day_phone}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">PAN</label>
+          <div class="col-sm-9">
+          {{form.pan}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">GST</label>
+          <div class="col-sm-9">
+          {{form.gst}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Permanent Address</label>
+          <div class="col-sm-9">
+          {{form.permanent_address}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Communication Address</label>
+          <div class="col-sm-9">
+          {{form.communication_address}}
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3 col-form-label">Prev Job</label>
+          <div class="col-sm-9">
+          {{form.job}}
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+        <button class="btn btn-light">Cancel</button>
+      </form>
+      {{form.errors}}
+    </div>
+  </div>
+</div>
+{% endblock %}

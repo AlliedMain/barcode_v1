@@ -1,0 +1,49 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Spela Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="{% static 'website/vendors/feather/feather.css' %}">
+  <link rel="stylesheet" href="{% static 'website/vendors/ti-icons/css/themify-icons.css' %}">
+  <link rel="stylesheet" href="{% static 'website/vendors//css/vendor.bundle.base.css' %}">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="{% static 'website/vendors//datatables.net-bs4/dataTables.bootstrap4.css'%}">
+  <link rel="stylesheet" href="{% static 'website/vendors//ti-icons/css/themify-icons.css'}">
+  <link rel="stylesheet" type="text/css" href="{% static 'website/js/select.dataTables.min.css' %}">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="{% static 'website/css/vertical-layout-light/style.css' %}">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="{% static 'website/images/logospela.svg' %}">
+</head>
+<div class="container-scroller">
+  <div class="container-fluid page-body-wrapper full-page-wrapper">
+    <div class="content-wrapper_1 d-flex align-items-center auth px-0">
+      <div class="row w-100 mx-0">
+        <div class="col-lg-4 mx-auto">
+          <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+            <div class="brand-logo">
+
+         <div>
+          <span><h4>" THANK YOU FOR USING SPELA" </h4></span>
+         </div>
+         <div class="mb-2">
+           <button type="button" class="btn btn-block btn-facebook auth-form-btn">
+             <i class="ti-facebook mr-2"></i>Connect using facebook
+           </button>
+         </div>
+         <div class="text-center mt-4 font-weight-light">
+            Don't have account? Create One
+               <a href='{% url 'account:register' %}'  class="text-primary">'Register'</a>
+             </div>
+             <div class="text-center mt-4 font-weight-light">
+                Log back in?
+                   <a href='{% url 'account:login' %}'  class="text-primary">'Login'</a>
+                 </div>

@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/logospela.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="../../index.html"><img src="../../images/logospela.png" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="../../index.html"><img src="../../images/logospela.png" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="../../images/faces/face28.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="../../images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="dshboard_skool.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Task Board</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Classes</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Create ClassRoom</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Create Section</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Assign Courses</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Attendance</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Attendance Reports</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Staff Attendance</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Teacher Attendance</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Finance and Taxes</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Inventory</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Books & Stationeries</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Uniforms and Shoes</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Fees</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Create Tax Reciept</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Teachers</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/forms/Addteacher.html">Add Teacher</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Renew Enrollment</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">LMS</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Course Catalog </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Learning Analytics </a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html">Advanced LMS</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html">E Commerce LMS </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Playrooms</h4>
+                  <p class="card-description">
+                    Create clasroom for your school
+                  </p>
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">Class name</label>
+                      <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Section Name</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Assign Teacher</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleSelectGender">Auto-Assign Batch</label>
+                        <select class="form-control" id="exampleSelectGender">
+                          <option>Seeds</option>
+                          <option>Sprouts</option>
+                          <option>Blooms</option>
+                        </select>
+                      </div>
+                    <div class="form-check form-check-flat form-check-primary">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        create new classroom
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+               <div>
+                 <svg width="970" height="791" viewBox="0 0 970 791" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <g id="undraw_snow_games_ohkc 1" clip-path="url(#clip0)">
+                 <path id="Vector" d="M690.523 589.401L684.696 612.322H708.591C705.178 603.267 704.306 594.668 707.264 586.758L690.523 589.401Z" fill="#FFB8B8"/>
+                 <path id="Vector_2" d="M970 789.913C970 790.272 969.99 790.641 969.971 791H0.489673C0.470045 790.641 0.460266 790.272 0.460266 789.913C0.460266 735.38 217.5 691.18 485.23 691.18C752.96 691.18 970 735.38 970 789.913Z" fill="#3F3D56"/>
+                 <path id="Vector_3" d="M811.348 739.933C841.096 739.933 865.211 713.177 865.211 680.173C865.211 647.169 841.096 620.413 811.348 620.413C781.6 620.413 757.485 647.169 757.485 680.173C757.485 713.177 781.6 739.933 811.348 739.933Z" fill="#D0CDE1"/>
+                 <path id="Vector_4" d="M814.286 653.01C834.298 653.01 850.521 645.713 850.521 636.712C850.521 627.71 834.298 620.413 814.286 620.413C794.274 620.413 778.051 627.71 778.051 636.712C778.051 645.713 794.274 653.01 814.286 653.01Z" fill="#6C63FF"/>
+                 <path id="Vector_5" d="M816.245 637.798C835.175 637.798 850.521 620.772 850.521 599.769C850.521 578.767 835.175 561.74 816.245 561.74C797.314 561.74 781.968 578.767 781.968 599.769C781.968 620.772 797.314 637.798 816.245 637.798Z" fill="#D0CDE1"/>
+                 <path id="Vector_6" d="M805.819 592.548C808.714 592.548 811.062 589.943 811.062 586.731C811.062 583.518 808.714 580.914 805.819 580.914C802.923 580.914 800.575 583.518 800.575 586.731C800.575 589.943 802.923 592.548 805.819 592.548Z" fill="#575A89"/>
+                 <path id="Vector_7" d="M823.733 592.548C826.629 592.548 828.976 589.943 828.976 586.731C828.976 583.518 826.629 580.914 823.733 580.914C820.837 580.914 818.49 583.518 818.49 586.731C818.49 589.943 820.837 592.548 823.733 592.548Z" fill="#575A89"/>
+                 <path id="Vector_8" d="M813.307 594.337L811.876 613.387C811.863 613.563 811.909 613.737 812.005 613.877C812.101 614.017 812.241 614.112 812.397 614.144C812.553 614.176 812.714 614.143 812.849 614.051C812.984 613.958 813.083 613.814 813.127 613.645L818.203 594.337L813.307 594.337Z" fill="#FF6584"/>
+                 <path id="Vector_9" d="M782.47 758.565L776.237 765.48L741.815 720.375L742.65 714.385L782.47 758.565Z" fill="#575A89"/>
+                 <path id="Vector_10" d="M755.526 736.673V741.02L724.187 738.847L721.249 736.673H755.526Z" fill="#575A89"/>
+                 <path id="Vector_11" d="M780.009 673.654C784.877 673.654 788.823 668.789 788.823 662.788C788.823 656.788 784.877 651.923 780.009 651.923C775.142 651.923 771.195 656.788 771.195 662.788C771.195 668.789 775.142 673.654 780.009 673.654Z" fill="#D0CDE1"/>
+                 <path id="Vector_12" d="M853.937 661.863L860.169 668.778L894.591 623.673L893.758 617.684L853.937 661.863Z" fill="#575A89"/>
+                 <path id="Vector_13" d="M872.067 645.404V649.75L903.405 647.577L906.344 645.404H872.067Z" fill="#575A89"/>
+                 <path id="Vector_14" d="M856.397 673.654C861.265 673.654 865.211 668.789 865.211 662.788C865.211 656.788 861.265 651.923 856.397 651.923C851.53 651.923 847.583 656.788 847.583 662.788C847.583 668.789 851.53 673.654 856.397 673.654Z" fill="#D0CDE1"/>
+                 <path id="Vector_15" d="M814.286 671.481C816.45 671.481 818.203 669.535 818.203 667.135C818.203 664.734 816.45 662.789 814.286 662.789C812.123 662.789 810.369 664.734 810.369 667.135C810.369 669.535 812.123 671.481 814.286 671.481Z" fill="#575A89"/>
+                 <path id="Vector_16" d="M814.286 685.606C816.45 685.606 818.203 683.66 818.203 681.26C818.203 678.859 816.45 676.914 814.286 676.914C812.123 676.914 810.369 678.859 810.369 681.26C810.369 683.66 812.123 685.606 814.286 685.606Z" fill="#575A89"/>
+                 <path id="Vector_17" d="M814.286 699.731C816.45 699.731 818.203 697.785 818.203 695.385C818.203 692.984 816.45 691.039 814.286 691.039C812.123 691.039 810.369 692.984 810.369 695.385C810.369 697.785 812.123 699.731 814.286 699.731Z" fill="#575A89"/>
+                 <path id="Vector_18" d="M644.981 706.24C645.185 701.423 644.008 696.658 641.617 692.63C639.227 688.602 635.747 685.519 631.677 683.823C627.608 682.128 623.158 681.908 618.969 683.195C614.78 684.482 611.067 687.21 608.363 690.986C606.178 687.289 603.074 684.374 599.426 682.595C600.602 677.655 600.249 672.42 598.424 667.729C596.599 663.038 593.408 659.163 589.361 656.723C585.314 654.284 580.647 653.423 576.106 654.277C571.566 655.132 567.415 657.652 564.32 661.435C559.465 656.096 553.637 651.972 547.227 649.338C548.018 643.788 546.934 638.109 544.183 633.391C541.433 628.673 537.209 625.248 532.322 623.772C527.435 622.297 522.229 622.875 517.702 625.396C513.176 627.917 509.648 632.203 507.795 637.433C504.17 634.635 499.829 633.208 495.415 633.363C491.001 633.519 486.75 635.248 483.292 638.295C479.834 641.342 477.354 645.545 476.218 650.279C475.082 655.014 475.352 660.028 476.988 664.579C474.563 665.57 472.329 667.059 470.401 668.967C465.697 667.045 460.522 667.096 455.85 669.112C451.178 671.129 447.331 674.97 445.034 679.914C443.173 677.623 440.912 675.773 438.388 674.478C438.449 673.92 438.512 673.362 438.536 672.791C438.671 669.609 438.204 666.431 437.166 663.461C436.127 660.491 434.539 657.796 432.504 655.548C430.47 653.3 428.034 651.55 425.353 650.41C422.671 649.27 419.805 648.765 416.937 648.929C414.07 649.092 411.265 649.92 408.703 651.359C406.142 652.798 403.88 654.816 402.064 657.283C400.248 659.75 398.917 662.612 398.158 665.685C397.399 668.757 397.228 671.971 397.657 675.121C392.999 676.529 388.944 679.726 386.215 684.144C383.486 688.561 382.26 693.911 382.757 699.238C359.678 699.989 337.42 701.189 316.149 702.812C313.53 692.639 308.239 683.562 300.95 676.739C293.662 669.917 284.707 665.658 275.227 664.505C265.748 663.353 256.174 665.36 247.727 670.27C239.28 675.18 232.343 682.771 227.801 692.074C224.239 689.083 219.897 687.461 215.43 687.453C210.963 687.445 206.615 689.051 203.045 692.028C199.474 695.006 196.875 699.193 195.64 703.956C194.405 708.719 194.603 713.798 196.202 718.425C195.271 718.611 194.344 718.798 193.421 718.985C193.454 718.607 193.504 718.234 193.52 717.85C193.648 714.855 193.243 711.861 192.328 709.039C191.412 706.218 190.005 703.624 188.185 701.407C186.366 699.189 184.17 697.391 181.724 696.116C179.277 694.841 176.629 694.113 173.929 693.974C171.229 693.835 168.53 694.288 165.988 695.308C163.446 696.327 161.11 697.891 159.114 699.913C157.117 701.934 155.5 704.372 154.353 707.088C153.207 709.804 152.554 712.743 152.432 715.739C152.422 715.976 152.438 716.206 152.435 716.441C150.555 715.649 148.532 715.363 146.533 715.606C144.534 715.849 142.616 716.615 140.935 717.84C139.254 719.065 137.859 720.715 136.865 722.654C135.87 724.593 135.304 726.766 135.212 728.994C135.138 730.783 644.944 707.128 644.981 706.24Z" fill="#D0CDE1"/>
+                 <path id="Vector_19" d="M7.2869 365.929C7.31525 365.83 7.34517 365.73 7.37365 365.631C7.36134 365.674 7.3459 365.716 7.33384 365.76L7.2869 365.929Z" fill="#2F2E41"/>
+                 <path id="Vector_20" d="M475.66 662.143L548.197 542.465L475.808 675.018L475.96 688.485C470.664 688.53 465.42 688.432 460.228 688.191L463.825 515.084L463.727 513.749L463.86 513.491L464.204 497.133L384.767 369.175L464.11 484.891L464.392 488.348L467.109 357.559L398.497 224.896L467.305 334.583L466.586 63.6216L466.588 62.7198L466.611 63.6067L471.166 277.161L533.697 190.415L471.371 295.558L472.735 412.546L530.277 298.37L472.947 429.745L473.707 494.796L557.388 335.751L473.961 517.49L475.66 662.143Z" fill="#3F3D56"/>
+                 <path id="Vector_21" d="M459.767 330.308C464.094 330.308 467.602 326.416 467.602 321.615C467.602 316.815 464.094 312.923 459.767 312.923C455.441 312.923 451.933 316.815 451.933 321.615C451.933 326.416 455.441 330.308 459.767 330.308Z" fill="#D0CDE1"/>
+                 <path id="Vector_22" d="M444.098 492.202C448.425 492.202 451.933 488.31 451.933 483.51C451.933 478.709 448.425 474.817 444.098 474.817C439.771 474.817 436.264 478.709 436.264 483.51C436.264 488.31 439.771 492.202 444.098 492.202Z" fill="#D0CDE1"/>
+                 <path id="Vector_23" d="M730.063 66.2789C733.309 66.2789 735.939 63.3601 735.939 59.7596C735.939 56.1591 733.309 53.2404 730.063 53.2404C726.818 53.2404 724.187 56.1591 724.187 59.7596C724.187 63.3601 726.818 66.2789 730.063 66.2789Z" fill="#D0CDE1"/>
+                 <path id="Vector_24" d="M768.062 235.887C771.307 235.887 773.938 232.969 773.938 229.368C773.938 225.768 771.307 222.849 768.062 222.849C764.817 222.849 762.186 225.768 762.186 229.368C762.186 232.969 764.817 235.887 768.062 235.887Z" fill="#D0CDE1"/>
+                 <path id="Vector_25" d="M118.96 193.404C123.287 193.404 126.794 189.512 126.794 184.712C126.794 179.911 123.287 176.019 118.96 176.019C114.633 176.019 111.125 179.911 111.125 184.712C111.125 189.512 114.633 193.404 118.96 193.404Z" fill="#D0CDE1"/>
+                 <path id="Vector_26" d="M111.125 123.865C114.37 123.865 117.001 120.947 117.001 117.346C117.001 113.746 114.37 110.827 111.125 110.827C107.88 110.827 105.249 113.746 105.249 117.346C105.249 120.947 107.88 123.865 111.125 123.865Z" fill="#D0CDE1"/>
+                 <path id="Vector_27" d="M105.249 599.769C108.494 599.769 111.125 596.85 111.125 593.25C111.125 589.65 108.494 586.731 105.249 586.731C102.004 586.731 99.3729 589.65 99.3729 593.25C99.3729 596.85 102.004 599.769 105.249 599.769Z" fill="#D0CDE1"/>
+                 <path id="Vector_28" d="M334.413 620.413C337.658 620.413 340.289 617.495 340.289 613.894C340.289 610.294 337.658 607.375 334.413 607.375C331.168 607.375 328.537 610.294 328.537 613.894C328.537 617.495 331.168 620.413 334.413 620.413Z" fill="#D0CDE1"/>
+                 <path id="Vector_29" d="M807.431 496.548C811.758 496.548 815.265 492.656 815.265 487.856C815.265 483.055 811.758 479.163 807.431 479.163C803.104 479.163 799.596 483.055 799.596 487.856C799.596 492.656 803.104 496.548 807.431 496.548Z" fill="#D0CDE1"/>
+                 <path id="Vector_30" d="M272.715 264.029C275.96 264.029 278.591 261.11 278.591 257.51C278.591 253.909 275.96 250.99 272.715 250.99C269.47 250.99 266.839 253.909 266.839 257.51C266.839 261.11 269.47 264.029 272.715 264.029Z" fill="#D0CDE1"/>
+                 <path id="Vector_31" d="M320.702 13.0385C323.947 13.0385 326.578 10.1197 326.578 6.51923C326.578 2.91876 323.947 0 320.702 0C317.457 0 314.826 2.91876 314.826 6.51923C314.826 10.1197 317.457 13.0385 320.702 13.0385Z" fill="#D0CDE1"/>
+                 <path id="Vector_32" d="M384.359 91.2693C387.604 91.2693 390.235 88.3505 390.235 84.75C390.235 81.1495 387.604 78.2308 384.359 78.2308C381.114 78.2308 378.483 81.1495 378.483 84.75C378.483 88.3505 381.114 91.2693 384.359 91.2693Z" fill="#D0CDE1"/>
+                 <path id="Vector_33" d="M370.648 176.019C373.893 176.019 376.524 173.1 376.524 169.5C376.524 165.9 373.893 162.981 370.648 162.981C367.403 162.981 364.772 165.9 364.772 169.5C364.772 173.1 367.403 176.019 370.648 176.019Z" fill="#D0CDE1"/>
+                 <path id="Vector_34" d="M549.866 72.7981C554.193 72.7981 557.701 68.9064 557.701 64.1058C557.701 59.3051 554.193 55.4135 549.866 55.4135C545.539 55.4135 542.031 59.3051 542.031 64.1058C542.031 68.9064 545.539 72.7981 549.866 72.7981Z" fill="#D0CDE1"/>
+                 <path id="Vector_35" d="M610.977 266.031C614.222 266.031 616.853 263.112 616.853 259.512C616.853 255.911 614.222 252.993 610.977 252.993C607.732 252.993 605.101 255.911 605.101 259.512C605.101 263.112 607.732 266.031 610.977 266.031Z" fill="#D0CDE1"/>
+                 <path id="Vector_36" d="M154.216 379.202C157.461 379.202 160.092 376.283 160.092 372.683C160.092 369.082 157.461 366.163 154.216 366.163C150.97 366.163 148.34 369.082 148.34 372.683C148.34 376.283 150.97 379.202 154.216 379.202Z" fill="#D0CDE1"/>
+                 <path id="Vector_37" d="M66.0756 504.154C69.3208 504.154 71.9516 501.235 71.9516 497.635C71.9516 494.034 69.3208 491.115 66.0756 491.115C62.8303 491.115 60.1996 494.034 60.1996 497.635C60.1996 501.235 62.8303 504.154 66.0756 504.154Z" fill="#D0CDE1"/>
+                 <g id="snowballing">
+                 <path id="Vector_38" d="M443.397 423.848C448.511 423.848 452.656 418.781 452.656 412.532C452.656 406.283 448.511 401.217 443.397 401.217C438.283 401.217 434.138 406.283 434.138 412.532C434.138 418.781 438.283 423.848 443.397 423.848Z" fill="#D0CDE1"/>
+                 <g id="Group 1">
+                 <path id="Vector_39" d="M294.097 429.505C297.932 429.505 301.041 425.706 301.041 421.019C301.041 416.332 297.932 412.532 294.097 412.532C290.262 412.532 287.153 416.332 287.153 421.019C287.153 425.706 290.262 429.505 294.097 429.505Z" fill="#D0CDE1"/>
+                 </g>
+                 <path id="Vector_40" d="M552.189 432.334C557.303 432.334 561.448 427.268 561.448 421.019C561.448 414.769 557.303 409.703 552.189 409.703C547.076 409.703 542.93 414.769 542.93 421.019C542.93 427.268 547.076 432.334 552.189 432.334Z" fill="#D0CDE1"/>
+                 <g id="Snow">
+                 <path id="Vector_41" d="M486.209 242.298C484.132 242.298 482.139 243.214 480.669 244.844C479.2 246.474 478.375 248.685 478.375 250.99C476.632 250.992 474.94 251.637 473.566 252.826C472.192 254.014 471.214 255.677 470.787 257.551C469.358 257.698 467.992 258.279 466.84 259.229C465.687 260.18 464.793 261.463 464.253 262.94C463.714 264.416 463.551 266.028 463.782 267.601C464.012 269.173 464.628 270.645 465.562 271.855C466.496 273.065 467.711 273.967 469.076 274.463C470.44 274.959 471.902 275.029 473.3 274.665C474.698 274.302 475.979 273.519 477.003 272.402C478.027 271.286 478.755 269.878 479.107 268.334C481.049 268.132 482.854 267.133 484.167 265.533C485.481 263.933 486.209 261.847 486.209 259.683C488.287 259.683 490.28 258.767 491.749 257.137C493.219 255.507 494.044 253.296 494.044 250.99C494.044 248.685 493.219 246.474 491.749 244.844C490.28 243.214 488.287 242.298 486.209 242.298V242.298Z" fill="#D0CDE1"/>
+                 <path id="Vector_42" d="M289.5 454C294.194 454 298 449.971 298 445C298 440.029 294.194 436 289.5 436C284.806 436 281 440.029 281 445C281 449.971 284.806 454 289.5 454Z" fill="#D0CDE1"/>
+                 <path id="Vector_43" d="M670.324 168.413C674.651 168.413 678.159 164.522 678.159 159.721C678.159 154.921 674.651 151.029 670.324 151.029C665.997 151.029 662.489 154.921 662.489 159.721C662.489 164.522 665.997 168.413 670.324 168.413Z" fill="#D0CDE1"/>
+                 <path id="Vector_44" d="M793.72 144.51C796.965 144.51 799.596 141.591 799.596 137.99C799.596 134.39 796.965 131.471 793.72 131.471C790.475 131.471 787.844 134.39 787.844 137.99C787.844 141.591 790.475 144.51 793.72 144.51Z" fill="#D0CDE1"/>
+                 <path id="Vector_45" d="M920.054 550.875C923.299 550.875 925.93 547.956 925.93 544.356C925.93 540.755 923.299 537.837 920.054 537.837C916.809 537.837 914.178 540.755 914.178 544.356C914.178 547.956 916.809 550.875 920.054 550.875Z" fill="#D0CDE1"/>
+                 <path id="Vector_46" d="M309 308C316.18 308 322 300.837 322 292C322 283.163 316.18 276 309 276C301.82 276 296 283.163 296 292C296 300.837 301.82 308 309 308Z" fill="#D0CDE1"/>
+                 <path id="Vector_47" d="M396.381 260.482C396.381 257.691 395.77 254.951 394.611 252.542C393.452 250.133 391.786 248.142 389.785 246.774C390.089 243.942 389.754 241.063 388.814 238.445C387.875 235.827 386.367 233.569 384.452 231.913C382.537 230.258 380.288 229.267 377.944 229.047C375.601 228.827 373.253 229.386 371.152 230.664C369.05 231.943 367.275 233.892 366.016 236.304C364.756 238.715 364.061 241.498 364.004 244.353C363.947 247.208 364.53 250.028 365.692 252.511C366.853 254.994 368.549 257.046 370.596 258.447C370.364 260.485 370.469 262.559 370.906 264.547C371.344 266.535 372.104 268.396 373.143 270.021C372.24 272.568 371.907 275.359 372.176 278.112C372.445 280.866 373.308 283.484 374.677 285.702C376.046 287.92 377.873 289.659 379.972 290.744C382.072 291.829 384.37 292.221 386.634 291.881C388.898 291.54 391.048 290.479 392.867 288.805C394.685 287.13 396.108 284.902 396.991 282.345C397.873 279.789 398.185 276.994 397.894 274.244C397.603 271.494 396.72 268.886 395.334 266.684C396.026 264.724 396.382 262.614 396.381 260.482V260.482Z" fill="#D0CDE1"/>
+                 <path id="Vector_48" d="M871.622 245.631C876.735 245.631 880.881 240.565 880.881 234.315C880.881 228.066 876.735 223 871.622 223C866.508 223 862.363 228.066 862.363 234.315C862.363 240.565 866.508 245.631 871.622 245.631Z" fill="#D0CDE1"/>
+                 <path id="Vector_49" d="M662.139 442.235C665.974 442.235 669.083 438.435 669.083 433.748C669.083 429.061 665.974 425.262 662.139 425.262C658.304 425.262 655.195 429.061 655.195 433.748C655.195 438.435 658.304 442.235 662.139 442.235Z" fill="#D0CDE1"/>
+                 </g>
+                 <path id="Vector_50" d="M542.93 592.164C548.044 592.164 552.189 587.097 552.189 580.848C552.189 574.599 548.044 569.533 542.93 569.533C537.817 569.533 533.671 574.599 533.671 580.848C533.671 587.097 537.817 592.164 542.93 592.164Z" fill="#D0CDE1"/>
+                 <path id="Vector_51" d="M730.423 319.181C734.259 319.181 737.368 315.381 737.368 310.694C737.368 306.007 734.259 302.207 730.423 302.207C726.588 302.207 723.479 306.007 723.479 310.694C723.479 315.381 726.588 319.181 730.423 319.181Z" fill="#D0CDE1"/>
+                 <g id="Snow Balls">
+                 <path id="Vector_52" d="M295.5 407.261C309.583 407.261 321 398.025 321 386.631C321 375.237 309.583 366 295.5 366C281.417 366 270 375.237 270 386.631C270 398.025 281.417 407.261 295.5 407.261Z" fill="#D0CDE1"/>
+                 </g>
+                 </g>
+                 <path id="Vector_53" d="M750.139 610.634L758.954 600.856L763.85 606.289L756.016 620.413L750.139 610.634Z" fill="#FFB8B8"/>
+                 <path id="Vector_54" d="M754.057 600.856L759.933 596.51C759.933 596.51 774.623 574.779 780.499 585.644C786.375 596.51 769.726 607.375 769.726 607.375L764.83 613.894L754.057 600.856Z" fill="#FF6584"/>
+                 <path id="Vector_55" opacity="0.15" d="M754.057 600.856L759.933 596.51C759.933 596.51 774.623 574.779 780.499 585.644C786.375 596.51 769.726 607.375 769.726 607.375L764.83 613.894L754.057 600.856Z" fill="black"/>
+                 <path id="Vector_56" d="M701.173 621.5H732.511L751.119 607.375L761.892 623.673L736.429 645.404L709.987 650.837L701.173 621.5Z" fill="#6C63FF"/>
+                 <path id="Vector_57" opacity="0.15" d="M701.173 621.5H732.511L751.119 607.375L761.892 623.673L736.429 645.404L709.987 650.837L701.173 621.5Z" fill="black"/>
+                 <path id="Vector_58" d="M713.904 682.889C713.904 682.889 742.305 717.659 737.408 726.351C732.512 735.043 721.739 735.043 719.78 733.957C717.822 732.87 689.421 715.486 689.421 715.486L693.338 701.361C693.338 701.361 687.462 686.149 693.338 685.063C699.214 683.976 713.904 682.889 713.904 682.889Z" fill="#2F2E41"/>
+                 <path id="Vector_59" d="M695.297 701.361C695.297 701.361 676.69 685.062 672.772 688.322C668.855 691.582 656.124 712.226 658.082 722.005C660.041 731.784 658.082 735.043 663.958 733.957C669.834 732.87 670.814 722.005 670.814 722.005L691.38 713.312L695.297 701.361Z" fill="#2F2E41"/>
+                 <path id="Vector_60" opacity="0.15" d="M701.436 704.162L700.91 705.079L722.455 720.29L722.981 719.373L701.436 704.162Z" fill="black"/>
+                 <path id="Vector_61" d="M701.173 595.966C709.286 595.966 715.863 588.669 715.863 579.668C715.863 570.667 709.286 563.37 701.173 563.37C693.06 563.37 686.483 570.667 686.483 579.668C686.483 588.669 693.06 595.966 701.173 595.966Z" fill="#FFB8B8"/>
+                 <path id="Vector_62" d="M683.545 598.139C683.545 598.139 679.628 609.005 679.628 635.082C679.628 661.159 665.917 673.111 676.69 686.149C687.462 699.188 729.927 690.909 729.927 690.909C729.927 690.909 729.469 691.311 729.574 690.495C730.553 682.889 719.78 603.572 715.863 602.486C711.946 601.399 683.545 598.139 683.545 598.139Z" fill="#6C63FF"/>
+                 <path id="Vector_63" d="M750.139 592.706L758.954 582.928L763.85 588.36L756.016 602.485L750.139 592.706Z" fill="#FFB8B8"/>
+                 <path id="Vector_64" d="M673.2 578.385C669.957 578.912 666.376 579.314 664.079 580.413C661.066 581.854 661.242 584.017 662.06 585.905C662.878 587.793 664.157 589.759 662.792 591.59C661.998 592.655 660.374 593.568 659.106 594.547C657.839 595.527 656.906 596.679 657.655 597.749C658.438 598.867 660.834 599.623 662.518 600.549C666.156 602.549 666.208 605.567 662.639 607.588C665.71 605.537 671.572 604.623 676.948 603.75C682.324 602.876 688.101 601.717 690.355 599.486C692.655 597.211 690.517 594.562 691.71 592.141C692.73 590.072 696.062 588.367 698.723 586.574C701.385 584.781 703.482 582.572 701.731 580.591C700.439 579.129 697.132 577.853 697.761 576.317C698.15 575.366 699.97 574.656 701.277 573.864C702.584 573.071 703.313 571.885 701.666 571.214C695.685 572.411 689.597 573.542 683.699 574.809C680.061 575.591 677.906 578.385 673.2 578.385Z" fill="#2F2E41"/>
+                 <path id="Vector_65" d="M701.173 603.572H732.511L751.119 589.447L761.892 605.745L736.429 627.476L709.987 632.909L701.173 603.572Z" fill="#6C63FF"/>
+                 <path id="Vector_66" d="M780.395 597.596C780.395 597.596 807.816 582.385 807.816 576.952C807.816 571.519 797.044 555.221 777.457 555.221C777.457 555.221 772.56 545.442 766.684 553.048C760.808 560.654 769.622 566.087 769.622 566.087C769.622 566.087 758.85 585.644 774.519 597.596H780.395Z" fill="#6C63FF"/>
+                 <path id="Vector_67" d="M540.073 419.404C548.727 419.404 555.742 411.621 555.742 402.019C555.742 392.418 548.727 384.635 540.073 384.635C531.419 384.635 524.403 392.418 524.403 402.019C524.403 411.621 531.419 419.404 540.073 419.404Z" fill="#FF6584"/>
+                 <path id="Vector_68" d="M529.711 402.266L525.227 395.622L526.011 394.971L529.868 400.685L536.645 394.242L543.475 400.736L549.376 394.189L555.599 401.092L554.906 401.86L549.376 395.725L543.526 402.215L536.645 395.672L529.711 402.266Z" fill="#575A89"/>
+                 <path id="Vector_69" d="M528.742 410.858L524.298 404.272L524.982 403.704L528.878 409.479L535.666 403.026L542.499 409.524L548.397 402.979L554.575 409.833L553.971 410.503L548.397 404.318L542.544 410.813L535.666 404.272L528.742 410.858Z" fill="#575A89"/>
+                 <path id="Vector_70" d="M540.073 372.139H539.093V385.178H540.073V372.139Z" fill="#575A89"/>
+                 <path id="Vector_71" d="M510.693 277.067C519.347 277.067 526.362 269.284 526.362 259.683C526.362 250.081 519.347 242.298 510.693 242.298C502.039 242.298 495.023 250.081 495.023 259.683C495.023 269.284 502.039 277.067 510.693 277.067Z" fill="#FF6584"/>
+                 <path id="Vector_72" d="M500.331 259.93L495.847 253.286L496.631 252.634L500.488 258.349L507.265 251.905L514.095 258.4L519.996 251.852L526.218 258.755L525.526 259.523L519.996 253.389L514.146 259.879L507.265 253.336L500.331 259.93Z" fill="#575A89"/>
+                 <path id="Vector_73" d="M499.362 268.52L494.918 261.936L495.602 261.368L499.498 267.143L506.286 260.689L513.119 267.187L519.017 260.643L525.195 267.497L524.592 268.167L519.017 261.982L513.164 268.477L506.286 261.936L499.362 268.52Z" fill="#575A89"/>
+                 <path id="Vector_74" d="M510.693 229.803H509.714V242.841H510.693V229.803Z" fill="#575A89"/>
+                 <path id="Vector_75" d="M390.235 424.837C398.889 424.837 405.904 417.053 405.904 407.452C405.904 397.851 398.889 390.067 390.235 390.067C381.581 390.067 374.566 397.851 374.566 407.452C374.566 417.053 381.581 424.837 390.235 424.837Z" fill="#FF6584"/>
+                 <path id="Vector_76" d="M379.873 407.699L375.389 401.054L376.173 400.403L380.031 406.118L386.807 399.674L393.636 406.169L399.538 399.621L405.761 406.525L405.068 407.293L399.538 401.157L393.688 407.648L386.807 401.104L379.873 407.699Z" fill="#575A89"/>
+                 <path id="Vector_77" d="M378.904 416.29L374.46 409.705L375.144 409.137L379.041 414.912L385.828 408.458L392.661 414.956L398.56 408.412L404.737 415.266L404.133 415.935L398.56 409.752L392.706 416.245L385.828 409.705L378.904 416.29Z" fill="#575A89"/>
+                 <path id="Vector_78" d="M390.235 377.572H389.256V390.611H390.235V377.572Z" fill="#575A89"/>
+                 <g id="Star">
+                 <path id="Vector_79" d="M480.811 88.206L467.467 77.096L453.819 87.744L459.219 70.2297L445.874 59.1187L462.556 59.4046L467.957 41.8903L472.867 59.5817L489.549 59.8676L475.902 70.5156L480.811 88.206Z" fill="#6C63FF"/>
+                 </g>
+                 <path id="Vector_80" d="M645.935 695.408C646.139 690.591 644.962 685.826 642.571 681.798C640.181 677.77 636.701 674.686 632.631 672.991C628.562 671.296 624.113 671.076 619.923 672.363C615.734 673.65 612.021 676.378 609.317 680.154C607.132 676.457 604.028 673.542 600.38 671.763C601.556 666.823 601.203 661.588 599.378 656.897C597.553 652.206 594.362 648.33 590.315 645.891C586.268 643.452 581.601 642.591 577.06 643.445C572.52 644.299 568.37 646.82 565.274 650.603C560.419 645.264 554.591 641.139 548.181 638.506C548.972 632.955 547.888 627.277 545.137 622.559C542.387 617.841 538.163 614.415 533.276 612.94C528.389 611.464 523.183 612.043 518.657 614.564C514.13 617.085 510.602 621.371 508.749 626.601C505.124 623.803 500.783 622.376 496.369 622.531C491.955 622.686 487.704 624.416 484.246 627.463C480.788 630.51 478.308 634.712 477.172 639.447C476.036 644.181 476.306 649.196 477.942 653.747C475.517 654.738 473.283 656.226 471.355 658.135C466.651 656.212 461.476 656.264 456.804 658.28C452.132 660.296 448.285 664.138 445.988 669.082C444.127 666.79 441.866 664.941 439.342 663.646C439.403 663.087 439.466 662.53 439.49 661.959C439.625 658.777 439.158 655.599 438.12 652.629C437.081 649.659 435.493 646.963 433.459 644.716C431.424 642.468 428.988 640.718 426.307 639.578C423.626 638.437 420.759 637.933 417.892 638.096C415.024 638.26 412.219 639.088 409.657 640.526C407.096 641.965 404.834 643.983 403.018 646.451C401.202 648.918 399.871 651.78 399.112 654.852C398.353 657.924 398.182 661.139 398.611 664.289C393.954 665.696 389.898 668.894 387.169 673.311C384.44 677.729 383.214 683.078 383.711 688.406C360.632 689.157 338.374 690.357 317.103 691.979C314.484 681.806 309.193 672.729 301.904 665.907C294.616 659.084 285.661 654.825 276.181 653.673C266.702 652.521 257.128 654.528 248.681 659.438C240.235 664.348 233.297 671.939 228.755 681.241C225.194 678.251 220.851 676.628 216.384 676.62C211.917 676.612 207.569 678.218 203.999 681.196C200.428 684.174 197.829 688.361 196.594 693.123C195.36 697.886 195.557 702.965 197.156 707.593C196.225 707.778 195.298 707.965 194.375 708.153C194.408 707.774 194.458 707.402 194.474 707.018C194.602 704.022 194.197 701.028 193.282 698.207C192.366 695.385 190.959 692.792 189.139 690.574C187.32 688.357 185.124 686.559 182.678 685.284C180.231 684.008 177.583 683.28 174.883 683.142C172.183 683.003 169.485 683.456 166.943 684.475C164.401 685.494 162.065 687.059 160.068 689.08C158.072 691.102 156.454 693.54 155.307 696.256C154.161 698.971 153.508 701.911 153.386 704.907C153.376 705.143 153.392 705.374 153.389 705.609C151.509 704.817 149.486 704.531 147.487 704.774C145.488 705.017 143.57 705.782 141.889 707.007C140.208 708.232 138.813 709.882 137.819 711.821C136.824 713.76 136.258 715.933 136.166 718.162C136.092 719.951 645.898 696.296 645.935 695.408Z" fill="#D0CDE1"/>
+                 <path id="Vector_81" d="M146.802 790.739C147.576 790.781 148.347 790.868 149.113 791H142.64C144.015 790.748 145.41 790.661 146.802 790.739V790.739Z" fill="#D0CDE1"/>
+                 <path id="Vector_82" d="M240.27 791H160.611C164.998 783.749 170.926 777.807 177.872 773.698C184.818 769.59 192.569 767.44 200.44 767.44C208.312 767.44 216.062 769.59 223.008 773.698C229.954 777.807 235.882 783.749 240.27 791V791Z" fill="#D0CDE1"/>
+                 <path id="Vector_83" d="M79.6589 791H0C4.3871 783.749 10.3151 777.807 17.2612 773.698C24.2072 769.59 31.9579 767.44 39.8295 767.44C47.701 767.44 55.4517 769.59 62.3977 773.698C69.3438 777.807 75.2718 783.749 79.6589 791V791Z" fill="#D0CDE1"/>
+                 <path id="Vector_84" d="M126.667 791H47.008C51.3951 783.749 57.3231 777.807 64.2692 773.698C71.2152 769.59 78.9659 767.44 86.8375 767.44C94.7091 767.44 102.46 769.59 109.406 773.698C116.352 777.807 122.28 783.749 126.667 791Z" fill="#D0CDE1"/>
+                 <path id="Vector_85" d="M347.996 741.019H268.337C272.724 733.768 278.652 727.826 285.598 723.718C292.545 719.609 300.295 717.46 308.167 717.46C316.038 717.46 323.789 719.609 330.735 723.718C337.681 727.826 343.609 733.768 347.996 741.019V741.019Z" fill="#D0CDE1"/>
+                 <path id="Vector_86" d="M667.259 766.01H587.6C591.987 758.759 597.915 752.817 604.861 748.708C611.807 744.599 619.558 742.45 627.429 742.45C635.301 742.45 643.052 744.599 649.998 748.708C656.944 752.817 662.872 758.759 667.259 766.01V766.01Z" fill="#D0CDE1"/>
+                 <path id="Vector_87" d="M529.868 785.85C532.357 787.071 534.606 788.821 536.488 791H314.875C316.114 787.952 317.94 785.242 320.224 783.061C322.508 780.88 325.195 779.28 328.096 778.374C327.894 776.904 327.825 775.416 327.891 773.93C328.014 770.936 328.669 767.999 329.816 765.286C330.964 762.572 332.582 760.136 334.578 758.117C336.575 756.098 338.91 754.535 341.451 753.517C343.992 752.5 346.689 752.048 349.387 752.187C352.086 752.326 354.733 753.054 357.178 754.328C359.623 755.603 361.818 757.4 363.637 759.616C365.456 761.832 366.863 764.424 367.779 767.243C368.694 770.063 369.1 773.055 368.973 776.049C368.954 776.614 368.895 777.168 368.827 777.733C371.352 779.025 373.615 780.874 375.476 783.166C377.775 778.225 381.622 774.386 386.293 772.371C390.964 770.356 396.138 770.304 400.841 772.225C402.769 770.313 405.005 768.824 407.432 767.835C406.345 764.832 405.854 761.604 405.992 758.371C406.157 754.299 407.304 750.351 409.312 746.937C411.32 743.524 414.117 740.771 417.41 738.964C420.704 737.158 424.374 736.364 428.038 736.667C431.701 736.969 435.225 738.356 438.242 740.682C440.025 735.655 443.36 731.494 447.651 728.939C451.942 726.385 456.911 725.604 461.673 726.735C466.435 727.866 470.68 730.835 473.653 735.115C476.626 739.394 478.132 744.706 477.905 750.103C477.866 750.936 477.788 751.767 477.67 752.591C484.077 755.225 489.904 759.348 494.759 764.684C497.853 760.893 502.005 758.366 506.549 757.507C511.092 756.649 515.764 757.51 519.814 759.952C523.864 762.393 527.057 766.274 528.881 770.971C530.704 775.667 531.052 780.907 529.868 785.85V785.85Z" fill="#D0CDE1"/>
+                 <path id="Vector_88" d="M749.268 791H711.466C713.05 786.894 715.685 783.395 719.045 780.936C722.405 778.476 726.342 777.165 730.367 777.165C734.392 777.165 738.329 778.476 741.689 780.936C745.049 783.395 747.684 786.894 749.268 791V791Z" fill="#D0CDE1"/>
+                 <path id="Vector_89" d="M908.155 791H788.804C788.111 788.53 787.816 785.945 787.932 783.362C788.097 779.29 789.244 775.341 791.252 771.928C793.26 768.515 796.057 765.761 799.35 763.955C802.644 762.148 806.314 761.355 809.977 761.657C813.641 761.959 817.165 763.346 820.182 765.673C821.965 760.645 825.3 756.484 829.591 753.93C833.882 751.375 838.851 750.594 843.613 751.725C848.375 752.856 852.62 755.826 855.593 760.105C858.566 764.385 860.072 769.696 859.845 775.093C859.806 775.927 859.728 776.757 859.61 777.581C866.017 780.216 871.844 784.339 876.699 789.674C878.715 787.211 881.193 785.267 883.958 783.978C886.723 782.689 889.708 782.086 892.705 782.213C895.702 782.339 898.638 783.191 901.307 784.709C903.976 786.227 906.313 788.374 908.155 791V791Z" fill="#D0CDE1"/>
+                 <path id="Vector_90" d="M568.141 791H541.659C545.361 787.526 550.052 785.62 554.9 785.62C559.748 785.62 564.439 787.526 568.141 791V791Z" fill="#D0CDE1"/>
+                 <path id="Vector_91" d="M218.531 475.85C228.167 475.85 235.979 467.183 235.979 456.491C235.979 445.8 228.167 437.132 218.531 437.132C208.894 437.132 201.082 445.8 201.082 456.491C201.082 467.183 208.894 475.85 218.531 475.85Z" fill="#A0616A"/>
+                 <path id="Vector_92" d="M222.636 431.807C228.853 432.239 234.621 435.438 240.012 438.9C239.564 438.649 239.054 438.571 238.562 438.679C238.069 438.787 237.624 439.074 237.296 439.494C236.576 440.268 236.124 441.301 235.432 442.105C234.145 443.598 232.215 444.115 230.398 444.564L221.927 446.655L214.07 448.594C212.118 449.221 210.076 449.429 208.053 449.207C206.053 448.842 204.074 447.41 203.551 445.238C202.825 442.219 208.234 437.728 210.217 435.91C213.755 432.88 218.181 431.418 222.636 431.807Z" fill="#2F2E41"/>
+                 <path id="Vector_93" d="M206.675 447.647C210.337 441.941 216.053 438.231 221.787 435.031C220.822 435.455 220.577 436.842 220.836 437.968C221.095 439.095 221.71 440.113 222.008 441.23C222.561 443.308 221.964 445.447 221.369 447.441L218.599 456.734L216.029 465.353C215.515 467.569 214.6 469.647 213.34 471.459C212.665 472.364 211.774 473.038 210.768 473.403C209.762 473.767 208.684 473.808 207.658 473.52C204.771 472.506 203.925 464.785 203.473 461.857C202.825 456.838 203.974 451.737 206.675 447.647V447.647Z" fill="#2F2E41"/>
+                 <path id="Vector_94" d="M294.484 441.687C294.484 441.687 295.511 416.635 300.643 417.774C305.775 418.912 301.669 443.965 301.669 443.965L294.484 441.687Z" fill="#A0616A"/>
+                 <path id="Vector_95" d="M293.459 484.961L270.398 503.491L263.691 508.877L246.244 481.543L257.134 476.781L280.115 466.738L293.459 437.129L304.744 440.547C306.804 446.24 293.459 484.961 293.459 484.961Z" fill="#575A89"/>
+                 <path id="Vector_96" d="M257.534 435.994C257.534 435.994 254.455 406.386 260.613 408.663C266.771 410.941 265.745 439.41 265.745 439.41L257.534 435.994Z" fill="#A0616A"/>
+                 <path id="Vector_97" d="M210.787 701.414L204.864 718.598L221.363 724.013L221.049 701.241L210.787 701.414Z" fill="#575A89"/>
+                 <path id="Vector_98" d="M259.458 583.283L243.047 658.728L227.286 706.829L206.76 707.177L225.412 645.36L232.681 576.904L259.458 583.283Z" fill="#2F2E41"/>
+                 <path id="Vector_99" d="M202.565 716.725C202.565 716.725 196.316 731.483 200.529 733.503C204.743 735.523 216.187 738.237 216.187 738.237L217.758 736.771C217.758 736.771 244.2 743.347 248.628 733.265C253.055 723.183 232.273 718.765 232.273 718.765L222.775 709.773L211.367 715.953L202.565 716.725Z" fill="#2F2E41"/>
+                 <path id="Vector_100" d="M189.187 698.364L183.266 715.548L199.765 720.963L199.45 698.19L189.187 698.364Z" fill="#575A89"/>
+                 <path id="Vector_101" d="M209.918 578.992L203.86 645.727L185.114 700.711L202.655 707.246L229.564 648.707L241.98 581.302L209.918 578.992Z" fill="#2F2E41"/>
+                 <path id="Vector_102" d="M179.856 714.31C179.856 714.31 170.063 726.467 173.579 729.74C177.095 733.014 187.361 739.247 187.361 739.247L189.245 738.341C189.245 738.341 212.885 753.036 219.728 744.78C226.571 736.525 207.797 725.696 207.797 725.696L201.015 714.063L188.489 716.364L179.856 714.31Z" fill="#2F2E41"/>
+                 <path id="Vector_103" opacity="0.15" d="M270.398 503.491L263.691 508.877L246.244 481.543L251.099 480.586C251.368 481.078 255.573 480.955 255.851 481.464C260.943 490.716 268.284 498.536 270.398 503.491Z" fill="black"/>
+                 <path id="Vector_104" d="M281.192 594.807C280.004 593.954 279.727 585.042 278.025 584.263C277.161 583.868 275.046 591.579 274.066 591.203C248.617 581.434 191.728 602.376 182.201 578.991C175.795 563.269 216.476 532.784 216.476 521.398C216.342 518.498 215.868 515.63 215.066 512.866C213.126 505.328 209.515 495.838 206.6 488.678C204.106 482.545 202.11 478.125 202.11 478.125C202.11 478.125 232.037 468.258 241.627 464.445C242.847 463.962 243.734 463.575 244.193 463.321C246.031 462.301 250.751 469.506 255.589 478.284C261.545 489.099 267.69 502.314 268.822 505.459C270.874 511.153 298.639 607.336 281.192 594.807Z" fill="#575A89"/>
+                 <path id="Vector_105" opacity="0.15" d="M251.891 476.192C240.78 491.032 228.822 508.772 218.527 512.128C217.399 512.506 216.24 512.753 215.066 512.866C213.126 505.328 209.515 495.838 206.6 488.678C207.787 487.233 209.208 486.05 210.79 485.19L238.626 469.989L241.627 464.445C242.847 463.962 243.734 463.575 244.193 463.321C246.031 462.301 247.052 467.415 251.891 476.192Z" fill="black"/>
+                 <path id="Vector_106" d="M210.789 480.797C203.186 484.95 200.416 495.741 205.342 503.392C207.898 507.362 211.987 509.871 218.531 507.735C235.979 502.042 268.824 461.046 268.824 448.52V437.132L256.507 432.577L238.625 465.594L210.789 480.797Z" fill="#575A89"/>
+                 <path id="Vector_107" d="M256.899 486.082C257.611 485.518 257.364 483.781 256.348 482.201C255.332 480.621 253.93 479.797 253.218 480.361C252.506 480.925 252.753 482.662 253.769 484.242C254.786 485.822 256.187 486.646 256.899 486.082Z" fill="#2F2E41"/>
+                 <path id="Vector_108" d="M261.65 495.747C262.362 495.183 262.116 493.445 261.099 491.865C260.083 490.286 258.682 489.462 257.97 490.026C257.258 490.589 257.505 492.327 258.521 493.907C259.537 495.487 260.938 496.311 261.65 495.747Z" fill="#2F2E41"/>
+                 <path id="Vector_109" d="M265.61 506.29C266.322 505.727 266.075 503.989 265.059 502.409C264.043 500.829 262.642 500.005 261.93 500.569C261.218 501.133 261.464 502.871 262.481 504.451C263.497 506.03 264.898 506.854 265.61 506.29Z" fill="#2F2E41"/>
+                 <path id="Vector_110" d="M267.17 517.299C267.998 516.985 268.21 515.242 267.645 513.405C267.079 511.568 265.949 510.334 265.121 510.648C264.294 510.961 264.081 512.705 264.647 514.541C265.213 516.378 266.342 517.613 267.17 517.299Z" fill="#2F2E41"/>
+                 <path id="Vector_111" d="M270.338 527.842C271.166 527.529 271.378 525.785 270.812 523.948C270.247 522.112 269.117 520.877 268.289 521.191C267.461 521.505 267.249 523.248 267.815 525.085C268.38 526.922 269.51 528.156 270.338 527.842Z" fill="#2F2E41"/>
+                 <path id="Vector_112" d="M273.506 537.507C274.333 537.193 274.546 535.45 273.98 533.613C273.414 531.777 272.285 530.542 271.457 530.856C270.629 531.17 270.417 532.913 270.982 534.75C271.548 536.586 272.678 537.821 273.506 537.507Z" fill="#2F2E41"/>
+                 <path id="Vector_113" d="M275.089 548.051C275.917 547.737 276.13 545.994 275.564 544.157C274.998 542.32 273.868 541.086 273.041 541.399C272.213 541.713 272.001 543.457 272.566 545.293C273.132 547.13 274.262 548.365 275.089 548.051Z" fill="#2F2E41"/>
+                 <path id="Vector_114" d="M276.673 558.594C277.501 558.28 277.713 556.537 277.148 554.7C276.582 552.864 275.452 551.629 274.625 551.943C273.797 552.257 273.584 554 274.15 555.837C274.716 557.673 275.845 558.908 276.673 558.594Z" fill="#2F2E41"/>
+                 <path id="Vector_115" d="M278.257 570.016C279.085 569.702 279.297 567.959 278.732 566.122C278.166 564.286 277.036 563.051 276.208 563.365C275.381 563.679 275.168 565.422 275.734 567.259C276.3 569.096 277.429 570.33 278.257 570.016Z" fill="#2F2E41"/>
+                 <path id="Vector_116" d="M279.049 581.438C279.877 581.125 280.089 579.381 279.523 577.544C278.958 575.708 277.828 574.473 277 574.787C276.173 575.101 275.96 576.844 276.526 578.681C277.092 580.518 278.221 581.752 279.049 581.438Z" fill="#2F2E41"/>
+                 <path id="Vector_117" d="M209.367 468.18C209.367 468.18 232.812 437.858 230.582 431.976C228.352 426.094 210 413.891 188.794 423.786C188.794 423.786 179.479 415.673 176.239 426.876C172.999 438.079 184.771 439.508 184.771 439.508C184.771 439.508 181.135 466.125 203.005 471.149L209.367 468.18Z" fill="#6C63FF"/>
+                 <path id="Vector_118" d="M589.039 725.808C597.693 725.808 604.709 718.024 604.709 708.423C604.709 698.822 597.693 691.039 589.039 691.039C580.386 691.039 573.37 698.822 573.37 708.423C573.37 718.024 580.386 725.808 589.039 725.808Z" fill="#FF6584"/>
+                 <path id="Vector_119" d="M578.678 708.67L574.193 702.026L574.978 701.374L578.835 707.089L585.612 700.645L592.442 707.14L598.343 700.592L604.565 707.495L603.873 708.264L598.343 702.129L592.493 708.619L585.612 702.076L578.678 708.67Z" fill="#575A89"/>
+                 <path id="Vector_120" d="M577.708 717.261L573.265 710.676L573.948 710.108L577.845 715.883L584.632 709.43L591.465 715.928L597.364 709.383L603.541 716.237L602.938 716.907L597.364 710.723L591.511 717.216L584.632 710.677L577.708 717.261Z" fill="#575A89"/>
+                 <path id="Vector_121" d="M589.039 678.543H588.06V691.582H589.039V678.543Z" fill="#575A89"/>
+                 <path id="Vector_122" d="M536.627 725.196C545.28 725.196 552.296 717.413 552.296 707.812C552.296 698.21 545.28 690.427 536.627 690.427C527.973 690.427 520.957 698.21 520.957 707.812C520.957 717.413 527.973 725.196 536.627 725.196Z" fill="#6C63FF"/>
+                 <path id="Vector_123" d="M527.376 712.995L520.746 709.148L521.2 708.185L526.902 711.494L530.509 702.437L539.197 705.026L541.974 696.294L550.272 699.542L549.946 700.567L542.571 697.68L539.818 706.336L531.066 703.726L527.376 712.995Z" fill="#575A89"/>
+                 <path id="Vector_124" d="M529.45 720.286L523.284 717.366L523.618 716.495L529.069 719.077L533.057 710.862L541.376 712.584L544.528 704.735L552.339 707.034L552.121 707.95L545.011 705.858L541.881 713.651L533.513 711.92L529.45 720.286Z" fill="#575A89"/>
+                 <path id="Vector_125" d="M525.006 680.857L524.122 681.325L529.193 693.088L530.077 692.619L525.006 680.857Z" fill="#575A89"/>
+                 <path id="Vector_126" d="M395.869 715.405C404.522 715.405 411.538 707.622 411.538 698.021C411.538 688.419 404.522 680.636 395.869 680.636C387.215 680.636 380.199 688.419 380.199 698.021C380.199 707.622 387.215 715.405 395.869 715.405Z" fill="#6C63FF"/>
+                 <path id="Vector_127" d="M386.024 694.428L383.788 686.507L384.723 686.182L386.646 692.995L394.969 689.421L399.462 698.067L406.99 694.071L410.788 702.879L409.904 703.347L406.53 695.52L399.067 699.481L394.54 690.77L386.024 694.428Z" fill="#575A89"/>
+                 <path id="Vector_128" d="M406.431 711.153L403.029 703.263L395.561 707.225L391.037 698.519L382.533 702.17L380.318 694.32L381.132 694.037L383.075 700.923L391.412 697.343L395.906 705.993L403.431 702L407.2 710.744L406.431 711.153Z" fill="#575A89"/>
+                 <path id="Vector_129" d="M403.907 669.482L399.997 681.778L400.92 682.139L404.831 669.844L403.907 669.482Z" fill="#575A89"/>
+                 <path id="Vector_130" d="M727.384 664.812C728.179 664.672 728.48 662.156 728.057 659.193C727.634 656.229 726.646 653.94 725.852 654.08C725.057 654.22 724.756 656.735 725.179 659.699C725.602 662.662 726.589 664.951 727.384 664.812Z" fill="#575A89"/>
+                 <path id="Vector_131" d="M725.426 649.6C726.22 649.46 726.521 646.945 726.098 643.981C725.675 641.018 724.688 638.729 723.893 638.869C723.098 639.008 722.797 641.524 723.22 644.487C723.643 647.451 724.631 649.74 725.426 649.6Z" fill="#575A89"/>
+                 <path id="Vector_132" d="M729.343 678.937C730.138 678.797 730.439 676.281 730.015 673.318C729.592 670.354 728.605 668.065 727.81 668.205C727.015 668.345 726.714 670.86 727.138 673.824C727.561 676.787 728.548 679.076 729.343 678.937Z" fill="#575A89"/>
+                 <path id="Vector_133" d="M730.012 692.019C730.813 691.935 731.258 689.446 731.006 686.459C730.755 683.472 729.901 681.117 729.1 681.2C728.299 681.283 727.853 683.773 728.105 686.76C728.357 689.747 729.211 692.102 730.012 692.019Z" fill="#575A89"/>
+                 <path id="Vector_134" d="M752.131 601.916C754.044 599.794 755.133 597.563 754.564 596.931C753.995 596.3 751.983 597.508 750.071 599.63C748.159 601.751 747.07 603.983 747.639 604.614C748.208 605.246 750.219 604.037 752.131 601.916Z" fill="#575A89"/>
+                 <path id="Vector_135" d="M715.182 573.111C713.112 572.851 711.343 574.642 709.891 576.3C708.673 577.77 707.345 579.123 705.923 580.346C703.791 582.04 701.323 583.138 698.727 583.548C696.131 583.957 693.485 583.666 691.012 582.699C691.134 582.748 695.749 575.968 696.258 575.344C698.184 572.982 700.252 570.766 702.446 568.711C704.088 567.172 706.347 564.537 708.697 565.679C711.171 566.881 713.425 570.903 715.182 573.111Z" fill="#2F2E41"/>
+                 <path id="Vector_136" d="M686.483 587.274C686.483 587.274 713.904 572.062 713.904 566.63C713.904 561.197 703.132 544.899 683.545 544.899C683.545 544.899 678.648 535.12 672.772 542.726C666.896 550.332 675.71 555.764 675.71 555.764C675.71 555.764 664.938 575.322 680.607 587.274H686.483Z" fill="#575A89"/>
+                 <path id="Vector_137" d="M720.485 571.985C718.415 571.725 716.645 573.516 715.193 575.174C713.975 576.644 712.648 577.997 711.225 579.22C709.094 580.914 706.625 582.012 704.029 582.422C701.434 582.831 698.787 582.54 696.314 581.573C696.437 581.622 701.052 574.842 701.56 574.218C703.487 571.856 705.554 569.64 707.748 567.585C709.39 566.046 711.649 563.411 714 564.553C716.473 565.755 718.727 569.777 720.485 571.985Z" fill="#575A89"/>
+                 <path id="Vector_138" d="M780.499 567.716C777.381 561.95 771.78 565.364 767.21 569.839C766.987 567.054 766.226 565 765.319 565C764.238 565 763.361 567.919 763.361 571.519C763.36 572.315 763.406 573.111 763.497 573.9C761.358 576.474 759.933 578.582 759.933 578.582L754.057 582.928L764.83 595.966L769.726 589.447C769.726 589.447 786.375 578.582 780.499 567.716Z" fill="#FF6584"/>
+                 <path id="Vector_139" d="M671.303 544.356C673.467 544.356 675.221 542.41 675.221 540.01C675.221 537.609 673.467 535.663 671.303 535.663C669.14 535.663 667.386 537.609 667.386 540.01C667.386 542.41 669.14 544.356 671.303 544.356Z" fill="#575A89"/>
+                 <path id="Vector_140" d="M694.084 659.664V666.765C694.084 669.401 695.028 671.93 696.708 673.795C698.389 675.659 700.668 676.706 703.044 676.706C705.421 676.706 707.7 675.659 709.381 673.795C711.061 671.93 712.005 669.401 712.005 666.765V659.664H694.084Z" fill="#6C63FF"/>
+                 <path id="Vector_141" opacity="0.15" d="M694.084 659.664V666.765C694.084 669.401 695.028 671.93 696.708 673.795C698.389 675.659 700.668 676.706 703.044 676.706C705.421 676.706 707.7 675.659 709.381 673.795C711.061 671.93 712.005 669.401 712.005 666.765V659.664H694.084Z" fill="black"/>
+                 </g>
+                 <defs>
+                 <clipPath id="clip0">
+                 <rect width="970" height="791" fill="white"/>
+                 </clipPath>
+                 </defs>
+                 </svg>
+               </div>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+                  <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.senitnelhz.tech/" target="_blank">Inspired by Engineering</a> All rights reserved</span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+                  </div>
+        </footer>
+
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="../../vendors/select2/select2.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/file-upload.js"></script>
+  <script src="../../js/typeahead.js"></script>
+  <script src="../../js/select2.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

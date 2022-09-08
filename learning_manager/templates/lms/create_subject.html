@@ -1,0 +1,50 @@
+{% extends 'teacher_base.html'%}
+{% load static %}
+
+{% block content %}
+
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-10 name-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Create Subjects</h4>
+            <p class="card-description">
+              Create New Subject
+            </p>
+            <form class="forms-sample" action="" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                {% csrf_token %}
+                  {{form.as_p}}
+              <div class="form-check form-check-flat form-check-primary">
+                <label class="form-check-label">
+                  <input type="checkbox" class="form-check-input">
+                  Assign to Inventory
+                </label>
+              </div>
+              <div>
+              <input type="submit"  name="Submit">
+              </div>
+            </form>
+            {{form.errors}}
+
+            </div>
+          </div>
+          </div>
+          <div>
+          <img src="{% static 'website/images/handrpint.gif' %}" alt="handprint"></div>
+             <span><img src="{% static 'website/images/handrpint.gif' %}" alt="handprint"></span>
+         </div>
+             </div>
+
+
+
+
+
+
+
+              </div>
+
+
+  {% endblock  %}

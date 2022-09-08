@@ -1,0 +1,35 @@
+{% extends 'SpelaSmsbase.html' %}
+{% load static %}
+{% block content %}
+
+<div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Teacher Name</th>
+        <th>Contact No</th>
+        <th>Registered Email</th>
+        <th>Registered User</th>
+      </tr>
+    </thead>
+    {% for i in teacher %}
+    <tbody>
+      <tr>
+        <td>{{i.first_name}}</td>
+        <td>{{i.mobile_no}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.user}}</td>
+        {% endfor %}
+      </tr>
+      <tr>
+    </tbody>
+  </table>
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+{% endblock %}

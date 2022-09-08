@@ -1,0 +1,56 @@
+{% extends 'lms_academic_base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- partial -->
+<div class="row row-space-24">
+    <div class="col-md-12">
+        <div class="tab-content p-2">
+            <div class="tab-pane active show" id="profile-videos">
+              <br></br>
+              <div class="row row-space-8">
+                <div class="col-rf-12 grid-margin transparent">
+                  <div class="row">
+                    <div class="col-md-12 mb-12 stretch-card transparent">
+                      <div class="card card-light-danger">
+                        <div class="card-body">
+                          <p class="mb-8">Awesome!</p>
+                          <p class="fs-30 mb-6">Welcome {{user}}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div class="card tale-bg"><div class="modal-body">
+                  <div class="row row-space-8">
+                    <div class="col-sm-12">
+                      <p class="fs-30 mb-6">When You are ready Just click</p>
+                      <br></br>
+                      <audio autoplay>
+                           <source  src="{% static 'website/audio/lms_portal.mp3' %}">
+                         </audio>
+                         {% for i in subject %}
+                      <div class="embed-responsive embed-responsive-16by9 m-b-4">
+                          <iframe class="embed-responsive-item" src="{{i.video_url}}"></iframe>
+                          <br></br>
+                          </div>
+                          </div>
+                            <br></br>
+                            <p></p>
+                      </div>
+                  </div>
+               </div>
+               <p></p>
+               <div class="card card-light-danger">
+                 <div class="card-body">
+                   <p class="mb-8">Class Notes</p>
+                   <p class="fs-30 mb-8">{{i.description}}</p>
+                 </div>
+               </div>
+               </div>
+               <br></br>
+                 {% endfor %}
+             </div>
+
+{% endblock %}

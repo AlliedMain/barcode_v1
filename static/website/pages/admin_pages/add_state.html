@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Spela admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../../vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="../../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../../images/favicon.png" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="../../SpelaSmS1.html"><img src="../../images/logospela.svg" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="../../SpelaSmS1.html"><img src="../../images/logospela.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Rem to save your Cards</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Configure your settings
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="../../images/faces/face28.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Call kunalkaushik2209
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      follow lead causes
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>May</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>May</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Make meeting with Spela</p>
+              <p class="text-gray mb-0 ">Call Sidharth</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="../../images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>kunalkaushik2209@gmail.com</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Aarushi Mallik</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Gojira</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>Sentinel Hz</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Guruprasad</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../../images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Arun</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <div class="container-fluid page-body-wrapper">
+        <!-- partial:partials/_settings-panel.html -->
+        <div class="theme-setting-wrapper">
+          <div id="settings-trigger"><i class="ti-settings"></i></div>
+          <div id="theme-settings" class="settings-panel">
+            <i class="settings-close ti-close"></i>
+            <p class="settings-heading">SIDEBAR SKINS</p>
+            <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+            <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+            <p class="settings-heading mt-2">HEADER SKINS</p>
+            <div class="color-tiles mx-0 px-4">
+              <div class="tiles success"></div>
+              <div class="tiles warning"></div>
+              <div class="tiles danger"></div>
+              <div class="tiles info"></div>
+              <div class="tiles dark"></div>
+              <div class="tiles default"></div>
+            </div>
+          </div>
+        </div>
+        <nav class="sidebar sidebar-offcanvas" id="sidebar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">
+                <i class="icon-grid menu-icon"></i>
+                <span class="menu-title">Dashboard</span>
+            </li>
+          </a>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+                <i class="icon-layout menu-icon"></i>
+                <span class="menu-title">Partner Schools</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="ui-basic">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Add School</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Add State</a></li>
+                  <li class="nav-item"> <a class="nav-link" href="pages/ui-features/typography.html">Register Franschise</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+                <i class="icon-columns menu-icon"></i>
+                <span class="menu-title">Franschise Owners</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Add Partner</a></li>
+                </ul>
+              </div>
+              <div class="collapse" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Add Accounts</a></li>
+                </ul>
+              </div>
+              <div class="collapse" id="form-elements">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Finance and Taxes</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+                <i class="icon-bar-graph menu-icon"></i>
+                <span class="menu-title">Distribution</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Cities</a></li>
+                </ul>
+              </div>
+              <div class="collapse" id="charts">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Districts</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+                <i class="icon-grid-2 menu-icon"></i>
+                <span class="menu-title">Students</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="tables">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Spela-People</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+                <i class="icon-contract menu-icon"></i>
+                <span class="menu-title">Teachers</span>
+                <i class="menu-arrow"></i>
+              </a>
+              <div class="collapse" id="icons">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/forms/Addteacher.html">Add Teacher</a></li>
+                </ul>
+              </div>
+              <div class="collapse" id="icons">
+                <ul class="nav flex-column sub-menu">
+                  <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Renew Enrollment</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Add State</h4>
+                  <p class="card-description">
+                    *Hint: Fill the mandatory fields.
+                  </p>
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label for="exampleSelectGender">State</label>
+                        <select class="form-control" id="exampleSelectGender">
+                          <option>Karnataka</option>
+                          <option>NCR</option>
+                          <option>Maharastra</option>
+                          <option>Tamil Nadu</option>
+                          <option>Kerela</option>
+                          <option>Goa</option>
+                          <option>West bengal</option>
+                          <option>Bihar</option>
+                          <option>Uttarpradesh</option>
+                        </select>
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Distict</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="District">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Enter Zone </label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="East Zone">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputConfirmPassword1">State License number</label>
+                      <input type="text" class="form-control" id="exampleInputConfirmPassword1" placeholder="GSTIN">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleSelectGender">Spela type</label>
+                        <select class="form-control" id="exampleSelectGender">
+                          <option>Spela First</option>
+                          <option>Spela Smart</option>
+                          <option>Spela Studio</option>
+                          <select>
+                      </div>
+                    <div class="form-group">
+                      <label>Franschise Registration Details:Upload</label>
+                      <input type="file" name="img[]" class="file-upload-default">
+                      <div class="input-group col-xs-12">
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                        <span class="input-group-append">
+                          <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>GST Returns Details:Upload</label>
+                      <input type="file" name="img[]" class="file-upload-default">
+                      <div class="input-group col-xs-12">
+                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
+                        <span class="input-group-append">
+                          <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
+                        </span>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                  </form>
+                </div>
+            <div>
+              <div class="col-md-6 grid-margin stretch-card">
+              <svg width="697" height="634" viewBox="0 0 697 634" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g id="undraw_positive_attitude_xaae 1" clip-path="url(#clip0)">
+              <path id="Vector" d="M485.802 303.96C485.802 303.96 457.763 295.473 461.312 313.508C464.862 331.542 488.286 319.873 488.286 319.873L485.802 303.96Z" fill="#FFB8B8"/>
+              <path id="Vector_2" d="M546.291 208.704C546.64 208.229 547.068 207.904 547.53 207.762C547.993 207.619 548.472 207.665 548.918 207.895C549.364 208.125 549.761 208.53 550.066 209.067C550.372 209.605 550.575 210.255 550.654 210.95L551.613 219.269C551.613 219.269 555.945 252.542 552.235 273.677C548.526 294.812 545.893 322.653 535.869 325.619C527.291 328.157 494.675 324.138 485.442 322.925C484.777 322.838 484.159 322.375 483.714 321.632C483.269 320.889 483.03 319.921 483.045 318.923L483.218 306.783C483.231 305.826 483.478 304.91 483.911 304.205C484.344 303.501 484.934 303.056 485.57 302.955L522.912 297.003C523.495 296.911 524.041 296.531 524.463 295.922C524.885 295.313 525.158 294.511 525.239 293.643C526.127 284.149 529 254.713 531.853 239.237C534.158 226.732 541.73 214.924 546.291 208.704Z" fill="#575A89"/>
+              <path id="Vector_3" d="M697 612.754H439.306V614.588H697V612.754Z" fill="#3F3D56"/>
+              <path id="Vector_4" d="M522.027 563.564V589.024L531.61 592.206L537.999 587.433L537.289 567.277L522.027 563.564Z" fill="#FFB8B8"/>
+              <path id="Vector_5" d="M578.636 563.564V589.024L588.22 592.206L594.608 587.433L593.898 567.277L578.636 563.564Z" fill="#FFB8B8"/>
+              <path id="Vector_6" d="M541.193 356.701C541.193 356.701 528.416 395.422 528.771 425.656C528.984 443.905 528.392 462.156 526.996 480.289L520.608 570.99L541.193 572.581L550.776 474.984L569.231 399.665L576.33 489.306L578.104 579.477H595.85C595.85 579.477 604.013 494.079 599.399 474.984C599.399 474.984 610.047 367.84 601.529 362.536C593.011 357.232 541.193 356.701 541.193 356.701Z" fill="#2F2E41"/>
+              <path id="Vector_7" d="M528.416 582.129C528.416 582.129 524.867 562.503 519.898 572.581C514.929 582.659 500.732 599.632 500.732 599.632C500.732 599.632 479.437 616.606 498.958 620.849C518.478 625.092 520.608 615.545 520.608 615.545C520.608 615.545 523.802 612.893 526.641 614.484C529.481 616.075 541.903 615.545 542.612 609.18C543.322 602.815 538.708 567.807 537.289 574.172C535.869 580.537 528.416 582.129 528.416 582.129Z" fill="#2F2E41"/>
+              <path id="Vector_8" d="M593.72 581.598C593.72 581.598 593.72 575.764 586.977 575.233C580.234 574.703 579.169 581.598 579.169 581.598C579.169 581.598 577.394 584.25 577.039 592.207C576.685 600.163 577.039 620.849 577.039 620.849C577.039 620.849 573.845 636.762 588.397 633.579C602.948 630.397 597.625 613.954 597.625 613.954L593.72 581.598Z" fill="#2F2E41"/>
+              <path id="Vector_9" d="M567.812 158.856L566.037 188.559L562.843 199.698L571.361 217.732L592.301 188.559C592.301 188.559 588.397 172.647 590.881 163.629L567.812 158.856Z" fill="#FFB8B8"/>
+              <path id="Vector_10" d="M615.37 209.776L615.207 212.391L608.982 311.616C608.982 311.616 608.737 316.23 608.283 322.383C607.516 332.79 606.153 347.594 604.368 351.928C601.529 358.823 603.658 364.658 603.658 364.658C587.332 378.979 539.063 358.293 539.063 358.293L550.066 292.521C550.066 292.521 540.128 224.097 541.193 217.732C542.258 211.367 564.617 188.559 564.617 188.559L565.277 191.211C574.807 210.306 584.493 193.863 587.332 190.15L593.011 182.724L615.37 209.776Z" fill="#575A89"/>
+              <path id="Vector_11" d="M542.384 391.769C508.547 398.63 476.266 401.141 446.396 396.917C435.789 395.31 425.269 392.61 414.91 388.837C395.918 382.118 372.604 382.118 346.99 385.695C331.417 387.768 316.067 392.634 301.271 400.186C281.422 410.455 259.677 409.566 236.622 400.97C227.161 397.288 218.042 391.862 209.477 384.817C192.623 371.281 172.675 376.182 150.935 391.769V270.732C171.232 257.522 191.004 255.389 210.149 266.525C217.128 270.691 224.344 273.908 231.71 276.138C258.317 283.909 285.781 282.056 311.811 270.732C347.01 252.908 383.83 258.449 421.117 270.732C462.659 283.845 503.147 284.618 542.384 270.732V391.769Z" fill="#3F3D56"/>
+              <path id="Vector_12" d="M257.694 612.754H0V614.588H257.694V612.754Z" fill="#3F3D56"/>
+              <path id="Vector_13" d="M318.934 45.6797L338.312 28.9598L327.124 -5.30399e-06L307.746 16.7199L318.934 45.6797Z" fill="#FF6584"/>
+              <path id="Vector_14" d="M247.148 191.475L266.526 174.755L255.338 145.795L235.96 162.515L247.148 191.475Z" fill="#3F3D56"/>
+              <path id="Vector_15" d="M444.099 152.963L463.477 136.243L452.289 107.283L432.912 124.003L444.099 152.963Z" fill="#D0CDE1"/>
+              <path id="Vector_16" d="M109.735 388.419L121.452 469.487L85.8666 588.819L106.697 602.439L146.621 465.596L121.099 345.417L105.91 351.254L109.735 388.419Z" fill="#2F2E41"/>
+              <path id="Vector_17" d="M99.3195 366.128C99.3195 366.128 103.659 377.802 113.206 387.531C122.753 397.259 142.716 461.465 142.716 461.465L121.018 591.174L150.961 603.497L167.451 451.088L133.602 336.944L99.3195 366.128Z" fill="#2F2E41"/>
+              <path id="Vector_18" d="M88.4705 584.279C88.4705 584.279 84.1309 591.414 85.8667 596.602C87.6025 601.79 88.4705 615.41 88.4705 615.41H92.3761V599.845L104.961 617.355C104.961 617.355 134.036 621.247 133.602 617.355C133.168 613.464 116.244 604.384 116.244 604.384L107.999 585.577L88.4705 584.279Z" fill="#2F2E41"/>
+              <path id="Vector_19" d="M126.659 585.986C126.659 585.986 122.319 593.12 124.055 598.308C125.791 603.497 126.659 617.116 126.659 617.116H130.565V601.551L143.15 619.062C143.15 619.062 172.225 622.953 171.791 619.062C171.357 615.17 154.433 606.091 154.433 606.091L146.187 587.283L126.659 585.986Z" fill="#2F2E41"/>
+              <path id="Vector_20" d="M116.244 188.427C125.351 188.427 132.734 177.393 132.734 163.782C132.734 150.171 125.351 139.137 116.244 139.137C107.137 139.137 99.7535 150.171 99.7535 163.782C99.7535 177.393 107.137 188.427 116.244 188.427Z" fill="#A0616A"/>
+              <path id="Vector_21" d="M102.791 165.079C102.791 165.079 101.489 189.724 93.2441 198.803C84.9988 207.883 84.9988 215.666 84.9988 215.666L118.414 238.365L110.602 213.72C110.602 213.72 108.433 212.423 111.904 205.937C115.376 199.452 118.414 183.887 118.414 183.887L102.791 165.079Z" fill="#A0616A"/>
+              <path id="Vector_22" d="M136.857 339.862C127.828 351.642 117.368 360.717 106.045 366.592L98.169 370.679C98.169 370.679 81.5141 340.472 89.9243 316.67C91.652 311.639 94.1228 307.261 97.1497 303.868L96.9761 302.733L92.7537 275.202L92.3762 272.738L79.7913 268.198C79.7913 268.198 79.7522 268.217 79.6785 268.243C78.7368 268.613 72.3532 270.364 77.1875 248.093C80.4035 233.274 82.7354 219.164 84.0486 210.539C84.2304 209.335 84.5733 208.198 85.0568 207.196C85.5403 206.195 86.1544 205.351 86.862 204.713C87.5696 204.076 88.3562 203.659 89.1744 203.488C89.9926 203.317 90.8255 203.395 91.623 203.717C95.6529 205.369 100.659 208.505 103.659 214.369C109.301 225.394 110.44 213.881 110.44 213.881C110.44 213.881 126.225 240.31 125.357 251.984C125.208 255.116 125.272 258.263 125.548 261.375V261.388C125.652 262.776 125.778 264.222 125.921 265.701C126.998 276.623 129.081 289.315 129.844 293.777C129.901 294.094 129.949 294.373 129.988 294.607C130.079 295.145 130.131 295.437 130.131 295.437L136.857 339.862Z" fill="#575A89"/>
+              <path id="Vector_23" opacity="0.2" d="M114.508 307.111L111.036 324.621C111.036 324.621 97.7225 319.55 89.9242 316.67C91.652 311.639 94.1228 307.261 97.1497 303.868L96.9761 302.733L92.7537 275.202L92.3761 272.738L79.7913 268.198C79.7913 268.198 79.7522 268.217 79.6784 268.243L78.9233 259.767C78.9233 259.767 100.621 261.712 101.923 269.495C103.225 277.278 100.621 285.06 99.3195 286.357C98.0176 287.654 99.3195 286.357 101.923 288.303C104.527 290.248 101.055 288.303 99.3195 292.194C97.5836 296.085 99.7535 292.843 100.187 294.788C100.621 296.734 100.187 294.14 99.7535 297.383C99.3195 300.625 101.489 298.031 101.923 298.031C102.357 298.031 114.508 307.111 114.508 307.111Z" fill="black"/>
+              <path id="Vector_24" d="M110.603 303.868L138.81 314.893C138.81 314.893 153.999 291.546 162.244 298.68C170.489 305.814 147.489 322.027 147.489 322.027L139.244 324.621L109.301 319.433L110.603 303.868Z" fill="#A0616A"/>
+              <path id="Vector_25" d="M78.9233 257.173L80.6592 276.629C80.6592 276.629 79.3573 276.629 80.6592 281.169C81.9611 285.709 80.6592 294.788 80.6592 294.788C80.6592 294.788 78.0554 295.437 80.2252 297.382C82.395 299.328 84.5648 304.516 83.6969 306.462C82.829 308.408 81.0931 311.002 84.9988 312.299C88.9044 313.596 111.036 322.027 111.036 322.027L114.508 304.516C114.508 304.516 102.357 295.437 101.923 295.437C101.489 295.437 99.3195 298.031 99.7535 294.788C100.187 291.546 100.621 294.14 100.187 292.194C99.7535 290.248 97.5836 293.491 99.3195 289.6C101.055 285.709 104.527 287.654 101.923 285.709C99.3195 283.763 98.0176 285.06 99.3195 283.763C100.621 282.466 103.225 274.683 101.923 266.901C100.621 259.118 78.9233 257.173 78.9233 257.173Z" fill="#575A89"/>
+              <path id="Vector_26" d="M112.441 207.334L113.749 204.227C114.362 202.77 114.562 201.01 114.307 199.332C114.051 197.655 113.36 196.198 112.385 195.282L102.422 185.917C101.447 185.001 100.269 184.701 99.1465 185.083C98.024 185.465 97.0491 186.498 96.4362 187.954L95.1285 191.062C94.3919 191.056 93.6666 191.331 93.021 191.861C92.3753 192.391 91.8307 193.158 91.4384 194.089L88.2208 201.735C87.6079 203.191 87.4072 204.952 87.6629 206.63C87.9187 208.307 88.6098 209.764 89.5843 210.68L103.01 223.3C103.985 224.216 105.163 224.516 106.286 224.133C107.408 223.751 108.383 222.718 108.996 221.262L112.213 213.616C112.605 212.684 112.832 211.618 112.872 210.519C112.912 209.42 112.763 208.324 112.441 207.334V207.334Z" fill="#575A89"/>
+              <path id="Vector_27" d="M115.669 163.358C116.592 161.345 116.188 158.547 116.848 156.315C117.885 152.81 120.942 152.09 123.502 151.86C125.199 151.597 126.912 151.665 128.598 152.065C129.342 152.278 130.043 152.746 130.646 153.433C131.248 154.119 131.736 155.006 132.07 156.023C132.43 157.169 132.392 153.617 132.224 149.052C132.054 144.394 130.899 139.937 128.925 136.323C126.952 132.709 124.262 130.125 121.242 128.942C121.206 128.928 121.171 128.914 121.136 128.901C118.043 127.716 114.849 126.811 111.67 127.253C108.491 127.695 105.299 129.625 103.26 133.297C102.328 134.975 101.656 136.969 100.621 138.506C98.803 141.208 96.1578 142.119 93.7222 143.314C90.932 144.548 88.3487 146.653 86.1428 149.489C83.9293 152.368 82.5644 156.435 82.3439 160.808C82.211 165.859 84.2771 171.151 87.7263 172.272C88.3263 172.451 88.8897 172.839 89.3706 173.404C92.6173 177.358 88.7778 181.235 88.734 185.552C88.6974 189.155 91.3423 191.599 93.7471 191.855C95.9969 191.997 98.2097 190.965 100.006 188.936C101.803 186.907 103.071 184.007 103.594 180.734C104.005 177.791 103.774 174.745 103.586 171.752C103.371 168.326 108.424 160.461 105.077 166.239C104.424 167.337 103.974 168.669 103.77 170.106C103.153 174.797 105.995 176.485 107.762 179.16C108.731 180.672 109.397 182.56 109.684 184.61C109.972 186.659 109.87 188.788 109.389 190.754C110.913 188.789 111.93 186.09 112.265 183.124C112.6 180.157 112.232 177.109 111.223 174.505C110.662 173.149 109.931 171.96 109.4 170.576C108.573 168.417 108.41 163.78 110.821 163.995C112.542 164.148 114.296 166.356 115.669 163.358Z" fill="#2F2E41"/>
+              <path id="Vector_28" d="M579.879 173.177C589.876 173.177 597.98 161.066 597.98 146.126C597.98 131.186 589.876 119.074 579.879 119.074C569.882 119.074 561.778 131.186 561.778 146.126C561.778 161.066 569.882 173.177 579.879 173.177Z" fill="#FFB8B8"/>
+              <path id="Vector_29" opacity="0.2" d="M614.497 213.451L608.272 312.677C608.272 312.677 608.027 317.291 607.573 323.444C594.359 328.165 557.874 331.772 557.874 331.772L556.099 312.677L596.56 296.234C596.56 296.234 591.591 254.861 597.27 237.888C598.66 233.759 599.904 229.523 600.996 225.197C601.991 221.209 603.88 217.859 606.341 215.717C608.803 213.576 611.685 212.775 614.497 213.451V213.451Z" fill="black"/>
+              <path id="Vector_30" d="M560.003 310.025C560.003 310.025 531.965 301.538 535.514 319.572C539.063 337.606 562.488 325.937 562.488 325.937L560.003 310.025Z" fill="#FFB8B8"/>
+              <path id="Vector_31" d="M604.368 207.124L615.37 209.776C615.37 209.776 623.179 241.601 621.759 263.348C620.339 285.095 620.694 313.207 611.111 318.511C601.529 323.815 558.584 328.059 558.584 328.059L556.809 308.964L597.27 292.521C597.27 292.521 592.301 251.148 597.98 234.175C603.658 217.202 604.368 207.124 604.368 207.124Z" fill="#575A89"/>
+              <path id="Vector_32" d="M564.446 118.651L560.967 116.569C560.967 116.569 568.241 104.6 578.362 105.641L575.515 100.958C575.515 100.958 582.474 96.7948 588.799 107.723C592.124 113.467 595.972 120.22 598.37 127.826H602.096L600.541 132.943L605.983 138.06L600.397 137.141C600.73 139.943 600.781 142.804 600.549 145.629C600.309 148.454 599.344 151.03 597.858 152.813C597.858 152.813 593.543 139.466 593.543 137.384V142.588C593.543 142.588 590.064 137.905 590.064 134.782L588.166 138.425H575.515L577.413 133.742L570.139 135.303L572.985 129.579L561.723 153.216C561.723 153.216 555.274 126.456 564.446 118.651Z" fill="#2F2E41"/>
+              <path id="Vector_33" d="M346.659 432.115C383.256 432.115 412.923 387.777 412.923 333.084C412.923 278.391 383.256 234.054 346.659 234.054C310.063 234.054 280.395 278.391 280.395 333.084C280.395 387.777 310.063 432.115 346.659 432.115Z" fill="#6C63FF"/>
+              <path id="Vector_34" d="M379.178 352.767C379.178 358.844 364.248 374.086 346.966 374.086C329.684 374.086 316.595 358.844 316.595 352.767C316.595 346.69 329.684 354.83 346.966 354.83C364.248 354.83 379.178 346.69 379.178 352.767Z" fill="#D0CDE1"/>
+              <path id="Vector_35" d="M370.588 315.662C374.654 315.662 377.951 310.736 377.951 304.659C377.951 298.582 374.654 293.656 370.588 293.656C366.522 293.656 363.225 298.582 363.225 304.659C363.225 310.736 366.522 315.662 370.588 315.662Z" fill="#3F3D56"/>
+              <path id="Vector_36" d="M322.731 315.662C326.797 315.662 330.093 310.736 330.093 304.659C330.093 298.582 326.797 293.656 322.731 293.656C318.664 293.656 315.368 298.582 315.368 304.659C315.368 310.736 318.664 315.662 322.731 315.662Z" fill="#3F3D56"/>
+              <path id="Vector_37" d="M327.026 304.659C329.059 304.659 330.707 302.196 330.707 299.157C330.707 296.119 329.059 293.656 327.026 293.656C324.992 293.656 323.344 296.119 323.344 299.157C323.344 302.196 324.992 304.659 327.026 304.659Z" fill="#D0CDE1"/>
+              <path id="Vector_38" d="M364.452 304.659C366.486 304.659 368.134 302.196 368.134 299.157C368.134 296.119 366.486 293.656 364.452 293.656C362.419 293.656 360.771 296.119 360.771 299.157C360.771 302.196 362.419 304.659 364.452 304.659Z" fill="#D0CDE1"/>
+              <path id="Vector_39" d="M347.886 240.473C362.457 240.473 374.269 222.82 374.269 201.044C374.269 179.268 362.457 161.615 347.886 161.615C333.316 161.615 321.504 179.268 321.504 201.044C321.504 222.82 333.316 240.473 347.886 240.473Z" fill="#6C63FF"/>
+              <path id="Vector_40" d="M339.414 205.125C348.731 213.415 349.065 238.256 349.065 238.256C349.065 238.256 334.293 249.658 324.976 241.368C315.659 233.079 315.324 208.237 315.324 208.237C315.324 208.237 330.096 196.835 339.414 205.125Z" fill="#3F3D56"/>
+              <path id="Vector_41" d="M372.377 236.873C363.957 247.083 348.24 238.983 348.24 238.983C348.24 238.983 346.175 214.329 354.595 204.119C363.016 193.908 378.733 202.009 378.733 202.009C378.733 202.009 380.798 226.663 372.377 236.873Z" fill="#3F3D56"/>
+          </div>
+            <div class="col-10 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-12 col-xl-8 mb-4 mb-xl-0">
+                      <h3 class="font-weight-bold">Welcome Danish</h3>
+                      <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6>
+                    </div>
+                  <div class="col-12 col-xl-4">
+                     <div class="justify-content-end d-flex">
+                      <div class="dropdown flex-md-grow-1 flex-xl-grow-0">
+                        <button class="btn btn-sm btn-light bg-white dropdown-toggle" type="button" id="dropdownMenuDate2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                         <i class="mdi mdi-calendar"></i> Today (27 May 2021)
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuDate2">
+                          <a class="dropdown-item" href="#">This Week</a>
+                          <a class="dropdown-item" href="#">Last Week</a>
+                          <a class="dropdown-item" href="#">Month (This)</a>
+                          <a class="dropdown-item" href="#">Previous Month</a>
+                        </div>
+                      </div>
+                     </div>
+                    </div>
+                  </div>
+                </div>
+
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+                  <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © Sentinelhz Nextgen Pvt Ltd<a href="https://www.senitnelhz.tech/" target="_blank">Inspired by Engineering</a> All rights reserved</span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+                  </div>
+        </footer>
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="../../vendors/select2/select2.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../../js/off-canvas.js"></script>
+  <script src="../../js/hoverable-collapse.js"></script>
+  <script src="../../js/template.js"></script>
+  <script src="../../js/settings.js"></script>
+  <script src="../../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="../../js/file-upload.js"></script>
+  <script src="../../js/typeahead.js"></script>
+  <script src="../../js/select2.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Skydash Admin</title>
+  <!-- plugins:css -->
+  <link rel="stylesheet" href="../vendors/feather/feather.css">
+  <link rel="stylesheet" href="../vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="../vendors/css/vendor.bundle.base.css">
+  <!-- endinject -->
+  <!-- Plugin css for this page -->
+  <link rel="stylesheet" href="../vendors/select2/select2.min.css">
+  <link rel="stylesheet" href="../vendors/select2-bootstrap-theme/select2-bootstrap.min.css">
+  <!-- End plugin css for this page -->
+  <!-- inject:css -->
+  <link rel="stylesheet" href="../css/vertical-layout-light/style.css">
+  <!-- endinject -->
+  <link rel="shortcut icon" href="../images/logospela.svg" />
+</head>
+
+<body>
+  <div class="container-scroller">
+    <!-- partial:../../partials/_navbar.html -->
+    <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+        <a class="navbar-brand brand-logo mr-5" href="../index.html"><img src="../images/logospela.svg" class="mr-2" alt="logo"/></a>
+        <a class="navbar-brand brand-logo-mini" href="../index.html"><img src="../images/logospela.svg" alt="logo"/></a>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <div class="input-group">
+              <div class="input-group-prepend hover-cursor" id="navbar-search-icon">
+                <span class="input-group-text" id="search">
+                  <i class="icon-search"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control" id="navbar-search-input" placeholder="Search now" aria-label="search" aria-describedby="search">
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item dropdown">
+            <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-toggle="dropdown">
+              <i class="icon-bell mx-0"></i>
+              <span class="count"></span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+              <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-success">
+                    <i class="ti-info-alt mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Application Error</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Just now
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-warning">
+                    <i class="ti-settings mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">Settings</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    Private message
+                  </p>
+                </div>
+              </a>
+              <a class="dropdown-item preview-item">
+                <div class="preview-thumbnail">
+                  <div class="preview-icon bg-info">
+                    <i class="ti-user mx-0"></i>
+                  </div>
+                </div>
+                <div class="preview-item-content">
+                  <h6 class="preview-subject font-weight-normal">New user registration</h6>
+                  <p class="font-weight-light small-text mb-0 text-muted">
+                    2 days ago
+                  </p>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="../images/faces/rosheen.jpg" alt="profile"/>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item">
+                <i class="ti-settings text-primary"></i>
+                Settings
+              </a>
+              <a class="dropdown-item">
+                <i class="ti-power-off text-primary"></i>
+                Logout
+              </a>
+            </div>
+          </li>
+          <li class="nav-item nav-settings d-none d-lg-flex">
+            <a class="nav-link" href="#">
+              <i class="icon-ellipsis"></i>
+            </a>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:../../partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border mr-3"></div>Light</div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark</div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href='#'>TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#" >CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel" aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="../images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="../images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link" href="dshboard_skool.html">
+              <i class="icon-grid menu-icon"></i>
+              <span class="menu-title">Task Board</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-title">Classes</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="ui-basic">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="../pages/forms/CreateClass.html">Create ClassRoom</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pages/forms/dropdowns.html">Create Section</a></li>
+                <li class="nav-item"> <a class="nav-link" href="../pages/forms/assign_courses.html">Assign Courses</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
+              <i class="icon-columns menu-icon"></i>
+              <span class="menu-title">Attendance</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Attendance Reports</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Staff Attendance</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Teacher Attendance</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="form-elements">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Finance and Taxes</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
+              <i class="icon-bar-graph menu-icon"></i>
+              <span class="menu-title">Inventory</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Books & Stationeries</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="charts">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/charts/chartjs.html">Uniforms and Shoes</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-title">Fees</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="tables">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Create Tax Reciept</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#icons" aria-expanded="false" aria-controls="icons">
+              <i class="icon-contract menu-icon"></i>
+              <span class="menu-title">Teachers</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/forms/Addteacher.html">Add Teacher</a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="icons">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/icons/mdi.html">Renew Enrollment</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+              <i class="icon-head menu-icon"></i>
+              <span class="menu-title">LMS</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html"> Course Catalog </a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html"> Learning Analytics </a></li>
+              </ul>
+            </div>
+            <div class="collapse" id="auth">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/login.html">Advanced LMS</a></li>
+                <li class="nav-item"> <a class="nav-link" href="pages/samples/register.html">E Commerce LMS </a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">
+              <i class="icon-paper menu-icon"></i>
+              <span class="menu-title">Documentation</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- partial -->
+      <div class="main-panel">
+        <div class="content-wrapper">
+          <div class="row">
+            <div class="col-md-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">CourseWare</h4>
+                  <p class="card-description">
+                    Assign Course for your Student
+                  </p>
+                  <form class="forms-sample">
+                    <div class="form-group">
+                      <label for="exampleInputUsername1">CourseName</label>
+                      <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleSelectGender">Select Category</label>
+                        <select class="form-control" id="exampleSelectGender">
+                          <option>English</option>
+                          <option>Shapes</option>
+                          <option>Nature</option>
+                          <option>Science</option>
+                        </select>
+                      </div>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Chapter Name</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Is this course self montitored.</label>
+                      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleSelectGender">Auto-Assign to Student</label>
+                        <select class="form-control" id="exampleSelectGender">
+                          <option>Anubhav Sinha</option>
+                          <option>Anshul Gupta</option>
+                          <option>Shashank Mehta</option>
+                          <option>Sumit Roy Rammohan</option>
+                          <option>Subhash Agashe</option>
+                        </select>
+                      </div>
+                    <div class="form-check form-check-flat form-check-primary">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input">
+                        Send info to Head Office
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                    <button class="btn btn-light">Cancel</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-6 grid-margin stretch-card">
+               <div>
+                 <svg width="526" height="497" viewBox="0 0 526 497" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <g id="undraw_happy_feeling_slmw 1" clip-path="url(#clip0)">
+                 <path id="Vector" d="M463.962 189.215C434.509 81.1965 332.739 3.22265 213.282 0.0951846C150.129 -1.55821 83.6745 17.9764 35.2906 86.3352C-51.2008 208.534 40.6057 292.977 104.611 333.103C135.533 352.527 163.396 375.884 187.392 402.496C230.625 450.344 313.796 509.803 412.849 416.64C484.643 349.116 483.581 261.165 463.962 189.215Z" fill="#F2F2F2"/>
+                 <path id="Vector_2" d="M514.33 437.936C514.33 459.226 406.978 497 274.552 497C142.126 497 47.3431 420.452 47.3431 399.161C47.3431 377.871 142.126 419.901 274.552 419.901C406.978 419.901 514.33 416.646 514.33 437.936Z" fill="#3F3D56"/>
+                 <path id="Vector_3" opacity="0.1" d="M514.33 437.936C514.33 459.226 406.978 497 274.552 497C142.126 497 47.3431 420.452 47.3431 399.161C47.3431 377.871 142.126 419.901 274.552 419.901C406.978 419.901 514.33 416.646 514.33 437.936Z" fill="black"/>
+                 <path id="Vector_4" d="M514.33 437.711C514.33 459.001 406.978 476.26 274.552 476.26C142.126 476.26 47.3431 420.452 47.3431 399.161C47.3431 377.871 142.126 399.161 274.552 399.161C406.978 399.161 514.33 416.42 514.33 437.711Z" fill="#3F3D56"/>
+                 <g id="ballons" opacity="0.7">
+                 <path id="Vector_5" opacity="0.7" d="M506.393 116.034C497.695 131.778 470.129 150.33 453.248 142.219C436.367 134.107 436.563 102.403 445.261 86.6589C449.438 79.0998 456.664 73.3977 465.349 70.8069C474.033 68.2161 483.466 68.9487 491.572 72.8436C499.677 76.7385 505.792 83.4767 508.572 91.5762C511.351 99.6757 510.567 108.473 506.393 116.034V116.034Z" fill="#6C63FF"/>
+                 <path id="Vector_6" opacity="0.7" d="M454.677 146.382C454.134 145.396 453.274 144.593 452.218 144.085C451.161 143.577 449.96 143.39 448.784 143.551L451.82 138.055L457.712 140.887L454.677 146.382Z" fill="#6C63FF"/>
+                 <path id="Vector_7" opacity="0.7" d="M450.382 140.694C451.059 141.566 451.948 142.276 452.976 142.766C454.005 143.255 455.143 143.509 456.297 143.508" stroke="#2F2E41" stroke-width="2" stroke-miterlimit="10"/>
+                 <path id="Vector_8" opacity="0.4" d="M501.617 98.5267C503.817 94.5432 502.716 89.9275 499.157 88.2172C495.597 86.5069 490.928 88.3497 488.728 92.3332C486.527 96.3167 487.629 100.932 491.188 102.643C494.747 104.353 499.416 102.51 501.617 98.5267Z" fill="white"/>
+                 <path id="Vector_9" opacity="0.7" d="M453.09 142.416L427.438 202.621" stroke="#2F2E41" stroke-width="2" stroke-miterlimit="10"/>
+                 </g>
+                 <path id="Vector_10" d="M511.808 212.613C492.766 230.529 446.803 244.727 427.593 226.968C408.383 209.209 423.201 166.217 442.242 148.301C451.387 139.702 463.82 134.843 476.806 134.792C489.792 134.74 502.268 139.501 511.491 148.028C520.714 156.554 525.928 168.148 525.987 180.259C526.047 192.371 520.946 204.008 511.808 212.613Z" fill="#FF6584"/>
+                 <path id="Vector_11" d="M427.622 233.194C427.338 231.638 426.539 230.203 425.336 229.092C424.134 227.98 422.589 227.247 420.917 226.996L427.564 220.742L434.269 226.941L427.622 233.194Z" fill="#FF6584"/>
+                 <path id="Vector_12" d="M424.399 223.753C424.918 225.208 425.8 226.527 426.972 227.602C428.145 228.677 429.574 229.477 431.143 229.937" stroke="#2F2E41" stroke-width="2" stroke-miterlimit="10"/>
+                 <path id="Vector_13" d="M426.313 228.479L363.174 287.887" stroke="#2F2E41" stroke-width="2" stroke-miterlimit="10"/>
+                 <g id="Group 1">
+                 <path id="Vector_14" opacity="0.4" d="M513.355 186.923C518.173 182.39 518.795 175.68 514.745 171.935C510.695 168.191 503.506 168.83 498.688 173.363C493.87 177.896 493.248 184.607 497.298 188.351C501.349 192.096 508.538 191.456 513.355 186.923Z" fill="white"/>
+                 <path id="Vector_15" d="M452.292 154.57C446.018 179.109 414.675 213.529 388.365 207.677C362.054 201.825 350.74 157.917 357.014 133.379C360.035 121.602 367.945 111.425 379.007 105.086C390.069 98.7471 403.378 96.7641 416.007 99.5731C428.636 102.382 439.552 109.753 446.357 120.066C453.161 130.379 455.296 142.79 452.292 154.57V154.57Z" fill="#6C63FF"/>
+                 </g>
+                 <path id="Vector_16" d="M391.861 212.981C390.75 211.789 389.268 210.952 387.621 210.585C385.974 210.219 384.246 210.342 382.678 210.938L384.868 202.373L394.051 204.416L391.861 212.981Z" fill="#6C63FF"/>
+                 <path id="Vector_17" d="M383.843 206.48C385.098 207.471 386.587 208.17 388.188 208.52C389.789 208.869 391.456 208.859 393.052 208.491" stroke="#2F2E41" stroke-width="2" stroke-miterlimit="10"/>
+                 <path id="Vector_18" opacity="0.4" d="M439.29 131.877C440.878 125.668 437.668 119.635 432.12 118.401C426.573 117.167 420.789 121.2 419.202 127.409C417.614 133.617 420.824 139.651 426.371 140.884C431.919 142.118 437.703 138.086 439.29 131.877Z" fill="white"/>
+                 <path id="Vector_19" d="M388.219 209.577L367.413 290.944" stroke="#2F2E41" stroke-width="2" stroke-miterlimit="10"/>
+                 <g id="Group" opacity="0.8">
+                 <path id="Vector_20" opacity="0.8" d="M160.661 369.733C146.983 382.146 114.365 391.616 101.056 378.86C87.7471 366.104 98.7867 335.952 112.464 323.539C115.716 320.587 119.56 318.262 123.775 316.696C127.991 315.13 132.496 314.353 137.033 314.411C141.571 314.469 146.052 315.359 150.22 317.032C154.388 318.705 158.162 321.127 161.327 324.16C164.492 327.193 166.985 330.778 168.664 334.71C170.343 338.642 171.176 342.843 171.114 347.075C171.052 351.307 170.097 355.486 168.303 359.374C166.51 363.261 163.913 366.781 160.661 369.733V369.733Z" fill="#6C63FF"/>
+                 <path id="Vector_21" opacity="0.8" d="M100.992 383.252C100.813 382.151 100.268 381.129 99.4351 380.331C98.6021 379.533 97.5221 378.997 96.3465 378.8L101.12 374.467L105.766 378.92L100.992 383.252Z" fill="#6C63FF"/>
+                 <path id="Vector_22" opacity="0.8" d="M98.8468 376.553C99.193 377.586 99.7972 378.527 100.61 379.3C101.422 380.072 102.42 380.653 103.52 380.996" stroke="#2F2E41" stroke-width="2" stroke-miterlimit="10"/>
+                 <path id="Vector_23" opacity="0.4" d="M162.103 351.628C165.563 348.488 166.094 343.762 163.288 341.072C160.482 338.382 155.401 338.748 151.941 341.889C148.481 345.029 147.95 349.756 150.756 352.445C153.562 355.135 158.642 354.769 162.103 351.628Z" fill="white"/>
+                 </g>
+                 <path id="Vector_24" d="M309.102 108.15H318.711C325.014 108.15 331.06 110.485 335.517 114.643C339.975 118.8 342.479 124.438 342.479 130.318V161.447H285.333V130.318C285.333 127.407 285.948 124.524 287.143 121.834C288.337 119.145 290.088 116.701 292.295 114.643C294.502 112.584 297.122 110.951 300.006 109.837C302.89 108.723 305.981 108.15 309.102 108.15Z" fill="#2F2E41"/>
+                 <path id="Vector_25" d="M281.828 246.927L274.616 261.069C274.616 261.069 268.737 280.066 275.398 282.097C282.059 284.128 283.359 262.602 283.359 262.602L288.875 248.348L281.828 246.927Z" fill="#FFB9B9"/>
+                 <path id="Vector_26" opacity="0.1" d="M281.828 246.927L274.616 261.069C274.616 261.069 268.737 280.066 275.398 282.097C282.059 284.128 283.359 262.602 283.359 262.602L288.875 248.348L281.828 246.927Z" fill="black"/>
+                 <path id="Vector_27" d="M283.194 224.794L274.072 254.567L288.514 261.655V226.211L283.194 224.794Z" fill="#575A89"/>
+                 <path id="Vector_28" d="M307.896 145.752C307.896 145.752 307.136 157.095 305.616 157.095C304.095 157.095 301.055 170.564 301.055 170.564L313.976 178.361L329.938 164.892L325.377 154.259C325.377 154.259 323.097 150.006 323.857 145.752C324.617 141.499 307.896 145.752 307.896 145.752Z" fill="#FFB9B9"/>
+                 <path id="Vector_29" opacity="0.1" d="M307.896 145.752C307.896 145.752 307.136 157.095 305.616 157.095C304.095 157.095 301.055 170.564 301.055 170.564L313.976 178.361L329.938 164.892L325.377 154.259C325.377 154.259 323.097 150.006 323.857 145.752C324.617 141.499 307.896 145.752 307.896 145.752Z" fill="black"/>
+                 <path id="Vector_30" d="M355.78 258.466L357.3 274.061C357.3 274.061 362.621 293.201 369.461 291.783C376.302 290.365 365.661 271.225 365.661 271.225L362.621 256.339L355.78 258.466Z" fill="#FFB9B9"/>
+                 <path id="Vector_31" d="M323.097 412.294C323.097 412.294 327.658 438.523 324.617 443.485C321.577 448.447 327.658 449.156 327.658 449.156L345.899 444.903V437.105C345.899 437.105 339.819 411.585 339.819 410.167C339.819 408.75 323.097 412.294 323.097 412.294Z" fill="#FFB9B9"/>
+                 <path id="Vector_32" d="M285.854 294.619C285.854 294.619 291.174 345.659 299.535 361.963C307.896 378.267 315.497 422.927 319.297 423.636C323.097 424.345 351.98 419.383 355.78 416.547C359.581 413.712 329.938 344.95 329.938 344.241C329.938 343.532 323.097 280.441 323.097 280.441L313.976 266.263L285.854 294.619Z" fill="#2F2E41"/>
+                 <path id="Vector_33" opacity="0.1" d="M285.854 294.619C285.854 294.619 291.174 345.659 299.535 361.963C307.896 378.267 315.497 422.927 319.297 423.636C323.097 424.345 351.98 419.383 355.78 416.547C359.581 413.712 329.938 344.95 329.938 344.241C329.938 343.532 323.097 280.441 323.097 280.441L313.976 266.263L285.854 294.619Z" fill="black"/>
+                 <path id="Vector_34" d="M329.938 442.067C329.938 442.067 322.337 438.523 320.817 440.65L314.736 449.156C314.736 449.156 288.894 460.498 298.015 461.916C307.136 463.334 324.617 463.334 326.898 461.916C329.178 460.498 354.26 447.738 353.5 447.03C352.74 446.321 346.659 431.434 345.899 432.852C345.139 434.27 334.498 444.903 329.938 442.067Z" fill="#2F2E41"/>
+                 <path id="Vector_35" d="M202.246 381.812C202.246 381.812 184.765 393.154 176.404 391.027C168.043 388.901 176.404 406.623 176.404 406.623L191.605 414.421L196.166 410.876C196.166 410.876 212.127 391.027 218.968 390.319C225.808 389.61 202.246 381.812 202.246 381.812Z" fill="#FFB9B9"/>
+                 <path id="Vector_36" d="M281.293 252.086L284.334 266.972L227.328 347.785C227.328 347.785 193.125 379.685 196.166 383.23C199.206 386.774 218.208 407.332 222.768 404.496C227.328 401.661 332.978 295.328 332.218 281.15C331.458 266.972 306.376 240.034 306.376 240.034L281.293 250.668V252.086Z" fill="#2F2E41"/>
+                 <path id="Vector_37" d="M180.204 395.99C180.204 395.99 187.045 388.901 183.244 388.192C178.97 387.489 174.656 387.016 170.323 386.774C168.803 386.774 148.281 376.85 146.761 380.394C145.241 383.939 155.882 402.37 161.962 404.496C168.043 406.623 190.085 421.51 190.085 421.51C190.085 421.51 201.486 412.294 199.966 410.167C198.446 408.041 177.164 403.787 180.204 395.99Z" fill="#2F2E41"/>
+                 <path id="Vector_38" d="M313.976 152.841C324.051 152.841 332.218 145.224 332.218 135.828C332.218 126.432 324.051 118.815 313.976 118.815C303.902 118.815 295.735 126.432 295.735 135.828C295.735 145.224 303.902 152.841 313.976 152.841Z" fill="#FFB9B9"/>
+                 <path id="Vector_39" d="M317.777 161.348C317.777 161.348 304.856 162.057 301.055 159.93C297.255 157.804 288.894 188.995 288.894 188.995L283.574 230.11C283.574 230.11 282.814 235.072 283.574 237.908C284.334 240.743 275.973 236.49 279.013 244.288C282.053 252.086 276.733 255.63 282.053 256.339C287.374 257.048 315.497 246.414 315.497 246.414L328.418 183.324L332.218 157.804L317.777 161.348Z" fill="#D0CDE1"/>
+                 <path id="Vector_40" d="M306.537 155.589C306.537 155.589 299.535 154.259 297.255 155.677C294.975 157.095 286.614 167.728 286.614 170.564C286.614 173.399 283.574 204.59 283.574 207.426C283.574 210.261 281.293 225.148 281.293 226.566C281.293 227.983 283.243 234.077 283.243 234.077L288.134 225.857C288.134 225.857 286.614 215.223 291.934 198.21C297.255 181.197 306.537 155.589 306.537 155.589Z" fill="#575A89"/>
+                 <path id="Vector_41" d="M313.976 166.31C313.976 166.31 324.13 151.424 324.754 152.841C325.377 154.259 336.779 156.386 336.779 156.386C336.779 156.386 357.3 169.855 355.78 175.526C354.26 181.197 343.619 223.73 343.619 223.73C343.619 223.73 333.738 245.706 341.339 261.301C348.94 276.897 339.819 282.568 339.819 282.568C339.819 282.568 333.738 285.403 335.258 288.239C336.779 291.074 317.777 301.708 315.497 293.91C313.216 286.112 285.094 239.326 291.174 222.312C297.255 205.299 313.976 166.31 313.976 166.31Z" fill="#575A89"/>
+                 <path id="Vector_42" d="M351.98 173.399C351.98 173.399 360.341 188.286 358.821 190.412C357.3 192.539 364.141 205.299 364.141 205.299C363.668 206.439 363.668 207.703 364.141 208.843C364.901 210.97 369.462 220.186 369.462 223.73C369.462 227.274 368.701 238.617 369.462 243.579C370.222 248.541 380.102 260.592 371.742 261.301C363.381 262.01 349.7 268.39 350.46 261.301C351.22 254.212 353.5 237.199 350.46 234.363C347.419 231.528 345.139 231.528 346.659 227.983C348.18 224.439 339.819 215.223 339.819 215.223L351.98 173.399Z" fill="#575A89"/>
+                 <path id="Vector_43" d="M329.219 131.637H300.367L293.834 117.635H334.118L329.219 131.637Z" fill="#2F2E41"/>
+                 <path id="Vector_44" d="M296.582 141.883C297.352 141.674 297.494 139.952 296.899 138.035C296.303 136.118 295.196 134.733 294.425 134.941C293.654 135.15 293.512 136.872 294.108 138.789C294.703 140.706 295.811 142.091 296.582 141.883Z" fill="#FFB9B9"/>
+                 <path id="Vector_45" d="M333.22 138.789C333.816 136.872 333.674 135.15 332.903 134.941C332.132 134.733 331.025 136.118 330.429 138.035C329.834 139.952 329.976 141.674 330.746 141.883C331.517 142.091 332.625 140.706 333.22 138.789Z" fill="#FFB9B9"/>
+                 <path id="Vector_46" d="M503.717 408.47C503.717 424.936 493.222 430.685 480.275 430.685C479.974 430.685 479.673 430.682 479.377 430.678C478.775 430.663 478.181 430.636 477.596 430.598C465.91 429.828 456.834 423.783 456.834 408.47C456.834 392.626 478.539 372.632 480.178 371.146C480.178 371.146 480.179 371.146 480.179 371.145C480.18 371.145 480.18 371.145 480.181 371.145C480.181 371.144 480.181 371.144 480.181 371.143C480.182 371.143 480.182 371.142 480.182 371.142C480.243 371.089 480.275 371.059 480.275 371.059C480.275 371.059 503.717 392.004 503.717 408.47Z" fill="#F2F2F2"/>
+                 <path id="Vector_47" d="M479.421 428.167L487.993 416.995L479.401 429.392L479.377 430.678C478.775 430.663 478.181 430.636 477.596 430.598L478.519 414.128L478.511 413.999L478.527 413.976L478.616 412.418L470 399.99L478.641 411.25L478.661 411.583L479.36 399.137L471.984 386.292L479.45 396.949L480.178 371.146L480.182 371.059V371.142L480.06 391.492L487.403 383.425L480.027 393.244L479.836 404.389L486.692 393.695L479.808 406.028L479.698 412.224L489.652 397.339L479.661 414.386L479.421 428.167Z" fill="#3F3D56"/>
+          </div>
+        </div>
+        <!-- content-wrapper ends -->
+        <!-- partial:../../partials/_footer.html -->
+        <footer class="footer">
+                  <div class="d-sm-flex justify-content-center justify-content-sm-between">
+                    <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">Copyright © 2021.  Premium <a href="https://www.senitnelhz.tech/" target="_blank">Inspired by Engineering</a> All rights reserved</span>
+                    <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Hand-crafted & made with <i class="ti-heart text-danger ml-1"></i></span>
+                  </div>
+        </footer>
+
+        <!-- partial -->
+      </div>
+      <!-- main-panel ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+  <!-- container-scroller -->
+  <!-- plugins:js -->
+  <script src="../vendors/js/vendor.bundle.base.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page -->
+  <script src="../vendors/typeahead.js/typeahead.bundle.min.js"></script>
+  <script src="../vendors/select2/select2.min.js"></script>
+  <!-- End plugin js for this page -->
+  <!-- inject:js -->
+  <script src="../js/off-canvas.js"></script>
+  <script src="../js/hoverable-collapse.js"></script>
+  <script src="../js/template.js"></script>
+  <script src="../js/settings.js"></script>
+  <script src="../js/todolist.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src=".../js/file-upload.js"></script>
+  <script src="../js/typeahead.js"></script>
+  <script src="../js/select2.js"></script>
+  <!-- End custom js for this page-->
+</body>
+
+</html>

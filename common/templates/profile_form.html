@@ -1,0 +1,38 @@
+{% extends 'profile_base.html'%}
+{% load static %}
+{% block content %}
+
+
+<div class="main-panel">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="col-md-8 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <img src="{% static 'website/images/teacher.gif' %}" alt="handprint">
+            <h4 class="card-title">Let's get you started with your profile </h4>
+                          <form class="pt-3"  action="" method="POST">
+                            {% csrf_token %}
+                            {{form.as_p}}
+
+                          <div>
+                              <input a class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn"  type="submit" value="Create"</a>
+                          </div>
+                            </form>
+                            {{form.errors}}
+                          </div>
+
+                          </div>
+
+                          </div>
+
+
+                          </div>
+
+
+                          </div>
+
+                          </div>
+
+
+{% endblock %}
