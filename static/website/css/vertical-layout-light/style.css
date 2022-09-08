@@ -22166,21 +22166,21 @@ code {
 }
 
 .card.card-dark-blue {
-  background: #4747A1;
+  background: #FFC701 ;
   color: #ffffff;
 }
 
 .card.card-dark-blue:hover {
-  background: #5050b2;
+  background: #FFA500 ;
 }
 
 .card.card-light-blue {
-  background: #7978E9;
+  background: #42AEEC ;
   color: #ffffff;
 }
 
 .card.card-light-blue:hover {
-  background: #8f8eed;
+  background: #0066FF;
 }
 
 .card.card-light-danger {
@@ -28559,7 +28559,7 @@ body2 {
 }
 
 .content-wrapper {
-  background: #F5F7FF;
+  background: #f5f7ff6b;
   background-image:url("../../images/cocktail_bg.png");
   background-blend-mode:soft-light;
   padding: 2.375rem 2.375rem;
@@ -28568,7 +28568,7 @@ body2 {
   flex-grow: 1;
 }
 .content-wrapper_1 {
-  background: #F5F7FF;
+  background: #f5f7ff6b;
   background-image:url("../../images/cocktail_bg.png");
   background-blend-mode:normal;
   padding: 2.375rem 2.375rem;
